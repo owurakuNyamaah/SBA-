@@ -19,7 +19,7 @@
         <h1>Religious and Moral Education SBA</h1>
         <form action = './rmeStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './rmeEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./rmedel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

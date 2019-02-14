@@ -19,7 +19,7 @@
         <h1>Mathematics SBA</h1>
         <form action = './mathStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './mathsEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./mathdel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

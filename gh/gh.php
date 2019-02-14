@@ -19,7 +19,7 @@
         <h1>Ghanaian Language SBA</h1>
         <form action = './ghStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './ghEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./ghdel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

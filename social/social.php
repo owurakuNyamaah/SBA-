@@ -19,7 +19,7 @@
         <h1>Social Studies SBA</h1>
         <form action = './socStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './socEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./socdel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

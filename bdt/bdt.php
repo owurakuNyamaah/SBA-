@@ -19,7 +19,7 @@
         <h1>BDT SBA</h1>
         <form action = './bdtStd.php'><button class = 'std'>ADD student</button></form>
         <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./bdtdel.php'><button class = 'del'>Delete</button></form>
         <div style = 'overflow-x:auto'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');

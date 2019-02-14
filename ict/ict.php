@@ -19,7 +19,7 @@
         <h1>Information and Communication Technology SBA</h1>
         <form action = './ictStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './ictEdit.php'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./ictdel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

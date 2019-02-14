@@ -39,7 +39,7 @@ input[type='text']:focus, input[type='numbers']:focus {
     background: #ddd;
     outline: none;
 }
-.save, .reset {
+.save, .reset, .del {
     background-color: dodgerblue;
     color: white;
     padding: 16px 10px;
@@ -51,6 +51,15 @@ input[type='text']:focus, input[type='numbers']:focus {
 .reset {
     background-color: lightgray;
     color: black;
+}
+.alldel {
+    background-color: red;
+    color:black;
+    padding: 16px 10px;
+    margin: 50px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
 }
 
 

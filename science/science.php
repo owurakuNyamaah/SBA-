@@ -19,7 +19,7 @@
         <h1>Integrated Science SBA</h1>
         <form action = './sciStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './sciEdit'><button class = 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./scidel.php'><button class = 'del'>Delete</button></form>
 
         <div style = 'overflow-x:auto'>
             <?php 

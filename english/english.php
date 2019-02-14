@@ -19,7 +19,8 @@
         <h1>English Language S.B.A</h1>
         <form action = './EngStd.php'><button class = 'std'>ADD student</button></form>
         <form action='engEdit.php'><button class= 'edit'>Edit</button></form>
-        <button class = 'del'>Delete</button>
+        <form action='./engdel.php'><button class = 'del'>Delete</button></form>
+
         <div style = 'overflow-x:auto'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
