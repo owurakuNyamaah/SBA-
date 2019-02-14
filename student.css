@@ -19,6 +19,9 @@ body {
     padding: 10px;
     font-weight: bold;
 }
+.std:hover {
+    background-color: dodgerblue;
+}
 
 header > h1, header > h3 {
     text-align:center;
@@ -43,7 +46,7 @@ input[type='text']:focus, input[type='numbers']:focus {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: 25%;
 }
 .reset {
     background-color: lightgray;
@@ -53,9 +56,12 @@ input[type='text']:focus, input[type='numbers']:focus {
 
 @media (min-width: 48em) {
     .container {
-        margin-left:60px;
+        margin-left:400px;
     }
     input[type='text'], input[type='number'] {
         width: 50%;
+    }
+    .std {
+        margin-left: 50px;
     }
 }

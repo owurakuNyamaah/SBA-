@@ -28,7 +28,7 @@ if(isset($_POST['register'])) {
 
         $_SESSION['username'] = $name;
         $_SESSION['success'] = 'welcome ';
-        header('location: dashboard.php');
+        header('location: index.php');
         
     }
     else{
@@ -47,7 +47,7 @@ if(isset($_POST['signin'])) {
     if(mysqli_num_rows($result) == 1) {
         $_SESSION['username'] = $name;
         $_SESSION['success'] = 'welcome  ';
-        header('location: dashboard.php');
+        header('location: index.php');
     }else {
         $unknown = "<span style='color:red;padding-left:30px'>*Invalid username/password</span>";
     }

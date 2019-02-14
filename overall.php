@@ -10,8 +10,8 @@
 </head>
 <body>
     <header class = 'header'>
-        <a href = './dashboard.php'>DASHBOARD</a>
-        <a href = './sba.php'>S.B.A</a>
+        <a href = './index.php'>HOME</a>
+        <a href = './sba.php'>SBA</a>
         <a href = './position.php'>POSITIONS</a>
     </header>
     
@@ -23,18 +23,18 @@
                 $connect = mysqli_connect('localhost','root','','sba');
                 $query = 
                 "SELECT
-                eng.student_name,
-                eng.total_100 AS ENGLISH,
-                science.total_100 AS SCIENCE,
-                maths.total_100 AS MATHS,
-                social.total_100 AS SOCIAL,
-                ict.total_100 AS ICT,
-                bdt.total_100 AS BDT,
-                rme.total_100 AS RME,
-                gh.total_100 AS GH,
-                french.total_100 AS FRENCH,
-                (eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + ict.total_100 + 
-                bdt.total_100 + rme.total_100 + gh.total_100 + french.total_100) AS TOTAL
+                    eng.student_name,
+                    eng.total_100 AS ENGLISH,
+                    science.total_100 AS SCIENCE,
+                    maths.total_100 AS MATHS,
+                    social.total_100 AS SOCIAL,
+                    ict.total_100 AS ICT,
+                    bdt.total_100 AS BDT,
+                    rme.total_100 AS RME,
+                    gh.total_100 AS GH,
+                    french.total_100 AS FRENCH,
+                    (eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + ict.total_100 + 
+                    bdt.total_100 + rme.total_100 + gh.total_100 + french.total_100) AS TOTAL
                 FROM
                     eng
                 LEFT JOIN science ON eng.student_name = science.student_name
@@ -54,7 +54,7 @@
                 if(mysqli_num_rows($result) > 0 ) {
                     echo "<table>
                             <tr>
-                                <th>STUDENT NAME</th>
+                                <th>NAME</th>
                                 <th>ENGLISH</th>
                                 <th>SCIENCE</th>
                                 <th>MATHS</th>
@@ -67,8 +67,6 @@
                                 <th>TOTAL</th>
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
-                        // $total = $row['ENGLISH']+$row['SCIENCE']+$row['MATHS']+$row['SOCIAL']+$row['ICT']+
-                        // $row['BDT']+$row['RME']+$row['GH']+$row['FRENCH'];
                         echo "<tr>
                                 <td>$row[student_name]</td>
                                 <td>$row[ENGLISH]</td>
@@ -88,17 +86,17 @@
                 }else {
                     echo "<table>
                             <tr>
-                                <th>STUDENT NAME</th>
-                                <th>english</th>
-                                <th>maths</th>
-                                <th>science</th>
-                                <th>social</th>
-                                <th>gh</th>
-                                <th>bdt</th>
-                                <th>french</th>
-                                <th>ict</th>
-                                <th>rme</th>
-                                <th>total</th>
+                                <th>NAME</th>
+                                <th>ENGLISH</th>
+                                <th>MATHS</th>
+                                <th>SCIENCE</th>
+                                <th>SOCIAL</th>
+                                <th>GH</th>
+                                <th>BDT</th>
+                                <th>FRENCH</th>
+                                <th>ICT</th>
+                                <th>RME</th>
+                                <th>TOTAL</th>
                             </tr>
                             <tr>
                                 <td>ZERO students added</td>

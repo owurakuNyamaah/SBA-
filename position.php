@@ -8,13 +8,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="sba.css"/>
 </head>
 <body>
-    <header class = 'headeer'>
-            <a href = './dashboard.php'>DASHBOARD</a>
-            <a href = './sba.php'>S.B.A</a>
+    <div class = 'header'>
+            <a href = './index.php'>HOME</a>
+            <a href = './sba.php'>SBA</a>
             <a href = './position.php'>POSITIONS</a>
-    </header>
+    </div>
     
     <h1 style='text-align:center'>POSITIONS</h1>
+    <form action = './overall.php'><button class = 'std'>OVERALL POSITIONS</button></form>
 
     <div class = 'container'>
         <a href='./english/engPos.php' class = 'english'>ENGLISH LANGUAGE</a>

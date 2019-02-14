@@ -10,36 +10,38 @@
 </head>
 <body>
     <header class = 'header'>
-        <a href = '../dashboard.php'>DASHBOARD</a>
-        <a href = '../sba.php'>S.B.A</a>
+        <a href = '../index.php'>HOME</a>
+        <a href = '../sba.php'>SBA</a>
         <a href = '../position.php'>POSITIONS</a>
     </header>
 
     <main>
         <h1>BDT Positions</h1>
         <div style = 'overflow-x: auto;'>
+
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
-                $query = "SELECT student_name, total_100 FROM bdt ORDER BY total_100 DESC";
+                $query = "SELECT
+                    student_name,
+                    total_100,
+                    @curRank := IF(@prev=total_100, @curRank,@inc) AS position,
+                    @prev := total_100,
+                    @inc := @inc + 1
+                FROM
+                    bdt,
+                    (
+                SELECT
+                    @curRank := 0,
+                    @prev := NULL,
+                    @inc :=1
+                ) r
+                ORDER BY
+                    total_100
+                DESC"
+                ;
                 $result = mysqli_query($connect, $query);
 
                 if(mysqli_num_rows($result) > 0 ) {
-                    // echo "<script>digitize = n => {
-                    //                 if(n=0){string(n)}
-                    //                 else if(n=1 || (n%10 && n%100 !=11)) {
-                    //                     `${string(n)}st`
-                    //                 }
-                    //                 else if(n=2 || (n%10 && n%100 !=12)) {
-                    //                     `${string(n)}nd`
-                    //                 }
-                    //                 else if(n=3 || (n%10 && n%100 !=13)) {
-                    //                     `${string(n)}rd`
-                    //                 }
-                    //                 else {
-                    //                     `${string(n)}th`
-                    //                 }
-                    //             }
-                    //     </script>"
                     echo "<table>
                             <tr>
                                 <th>STUDENT NAME</th>
@@ -50,7 +52,7 @@
                         echo "<tr>
                                 <td>$row[student_name]</td>
                                 <td>$row[total_100]</td>
-                                <td id='position'></td>
+                                <td>$row[position]</td>
                             </tr>";
                     }
                     echo "</table>";                     

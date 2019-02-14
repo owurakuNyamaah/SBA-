@@ -10,15 +10,16 @@
 </head>
 <body>
     <header class = 'header'>
-        <a href = '../dashboard.php'>DASHBOARD</a>
-        <a href = '../sba.php'>S.B.A</a>
+        <a href = '../index.php'>HOME</a>
+        <a href = '../sba.php'>SBA</a>
         <a href = '../position.php'>POSITIONS</a>
     </header>
     
     <main>
-        <h1>BDT S.B.A</h1>
-        <form action = './bdtStd.php'><button class = 'std'>Add student</button></form>
-
+        <h1>BDT SBA</h1>
+        <form action = './bdtStd.php'><button class = 'std'>ADD student</button></form>
+        <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
+        <button class = 'del'>Delete</button>
         <div style = 'overflow-x:auto'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
@@ -60,7 +61,6 @@
                                 <th>EXAMS 50%</th>
                                 <th>TOTAL 100%</th>
                                 <th>REMARKS</th>
-                                <th>action</th>
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
@@ -75,9 +75,6 @@
                                 <td>$row[exams_50]</td>
                                 <td>$row[total_100]</td>
                                 <td>$row[remarks]</td>
-                                <td>
-                                <form action='bdtEdit.php' method = 'post'><button>edit<button></form>
-                                </td>
                             </tr>";
                     }
                     echo "</table>";

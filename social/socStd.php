@@ -30,20 +30,20 @@
         <label>Project(max 15)</label><br>
         <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' required/><br>
 
-        <label>Total(total class score 60)</label><br>
-        <input name='total60' type = 'number' min = '0' max = '60' step = 'any' required/><br>
+        <!-- <label>Total(total class score 60)</label><br>
+        <input name='total60' type = 'number' min = '0' max = '60' step = 'any' required/><br> -->
 
-        <label>Total 50%(total class score scaled to 50%)</label><br>
-        <input name='total50' type ='number'min = '0' max = '50' step = 'any' required/><br>
+        <!-- <label>Total 50%(total class score scaled to 50%)</label><br>
+        <input name='total50' type ='number'min = '0' max = '50' step = 'any'required/><br> -->
 
         <label>Exams Score(100%)</label><br>
         <input name='exams' type ='number' min = '0' max = '100' step = 'any' required/><br>
 
-        <label>Total 50% (thus exams scaled to 50%)</label><br>
+        <!-- <label>Total 50% (thus exams scaled to 50%)</label><br>
         <input name='exams50' type ='number' min = '0' max = '50' step = 'any' required/><br>
 
         <label>Total 100% (class score scaled to 50% plus exams scaled to 50%)</label><br>
-        <input name='total100' type ='number' min = '0' max = '100' step = 'any' required/><br>
+        <input name='total100' type ='number' min = '0' max = '100' step = 'any' required/><br> -->
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
@@ -58,11 +58,12 @@ if(isset($_POST['submit'])) {
     $classTest = $_POST['classTest'];
     $groupWork = $_POST['groupWork'];
     $project = $_POST['project'];
-    $total60 = $_POST['total60'];
-    $total50 = $_POST['total50'];
+    $total60 = $indTest+$classTest+$groupWork+$project;
+    $total50 = ($indTest+$classTest+$groupWork+$project) * 0.50;
     $exams = $_POST['exams'];
-    $exams50 = $_POST['exams50'];
-    $total100 = $_POST['total100'];
+    $exams50 = $exams * 0.50;
+    $total100 = $total50+$exams50; 
+
 
     $query = "INSERT INTO social(
         student_name,

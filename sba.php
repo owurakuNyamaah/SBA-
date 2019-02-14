@@ -10,8 +10,8 @@
 </head>
 <body>
     <header class = 'header'>
-        <a href = './dashboard.php'>DASHBOARD</a>
-        <a href = './sba.php'>S.B.A</a>
+        <a href = './index.php'>HOME</a>
+        <a href = './sba.php'>SBA</a>
         <a href = './position.php'>POSITIONS</a>
     </header>
     <h1 style='text-align:center;'>STUDENT BASED ASSESEMENT</h1>

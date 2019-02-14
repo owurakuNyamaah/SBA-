@@ -10,15 +10,16 @@
 </head>
 <body>
     <header class = 'header'>
-        <a href = '../dashboard.php'>DASHBOARD</a>
-        <a href = '../sba.php'>S.B.A</a>
+        <a href = '../index.php'>HOME</a>
+        <a href = '../sba.php'>SBA</a>
         <a href = '../position.php'>POSITIONS</a>
     </header>
     
     <main>
         <h1>English Language S.B.A</h1>
         <form action = './EngStd.php'><button class = 'std'>ADD student</button></form>
-
+        <form action='engEdit.php'><button class= 'edit'>Edit</button></form>
+        <button class = 'del'>Delete</button>
         <div style = 'overflow-x:auto'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
@@ -49,7 +50,7 @@
                 if(mysqli_num_rows($result) > 0 ) {
                     echo "<table>
                             <tr>
-                                <th>STUDENT NAME</th>
+                                <th>NAME</th>
                                 <th>INDIVIDUAL TEST(15)</th>
                                 <th>CLASS TEST(15)</th>
                                 <th>GROUP WORK(15)</th>
@@ -60,7 +61,6 @@
                                 <th>EXAMS 50%</th>
                                 <th>TOTAL 100%</th>
                                 <th>REMARKS</th>
-                                <th>action</th>
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
@@ -75,9 +75,6 @@
                                 <td>$row[exams_50]</td>
                                 <td>$row[total_100]</td>
                                 <td>$row[remarks]</td>
-                                <td>
-                                    <form action='engEdit.php' method = 'post'><button>edit<button></form>
-                                </td>
                             </tr>";
                     }
                     echo "</table>";

@@ -10,8 +10,8 @@
 </head>
 <body>
     <header class = 'header'>
-            <a href = '../dashboard.php'>DASHBOARD</a>
-            <a href = '../sba.php'>S.B.A</a>
+            <a href = '../index.php'>HOME</a>
+            <a href = '../sba.php'>SBA</a>
             <a href = '../position.php'>POSITIONS</a>
     </header>
 
@@ -20,7 +20,18 @@
         <div style = 'overflow-x: auto;'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
-                $query = "SELECT student_name, total_100 FROM rme ORDER BY total_100 DESC";
+                $query = "SELECT 
+                            student_name,
+                            total_100,
+                            @curRank := IF(@prev = total_100,@curRank,@add) AS position,
+                            @prev := total_100,
+                            @add := @add + 1
+                        FROM 
+                            rme,
+                            (SELECT @curRank := 0,@prev := NULL, @add := 1) r
+                        ORDER BY 
+                            total_100
+                        DESC";
                 $result = mysqli_query($connect, $query);
 
                 if(mysqli_num_rows($result) > 0 ) {
@@ -28,11 +39,13 @@
                             <tr>
                                 <th>STUDENT NAME</th>
                                 <th>TOTAL 100%</th>
+                                <th>POSITION</th>
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
                                 <td>$row[student_name]</td>
                                 <td>$row[total_100]</td>
+                                <td>$row[position]</td>
                             </tr>";
                     }
                     echo "</table>";                     

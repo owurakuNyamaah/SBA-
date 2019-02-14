@@ -27,53 +27,44 @@
 h1 {
     text-align: center;
 }
-.std {
+.std, .edit, .del {
     background-color: rgba(0, 0, 0, 0.377);
     color:white;
-    margin-left:80%;
+    margin-left:10px;
     border-radius: 10px;
     padding: 5px;
     font-weight: bold;
 }
+form, button {
+    display:inline;
+}
+.std:hover, .edit:hover {
+    background-color: dodgerblue;
+}
+.del:hover {
+    background-color: red;
+}
+
 
 table {
     border-collapse: collapse;
     width:100%;
 }
-/* table, td, th {
-    border:1px solid black;
-    padding:5px;
-}
-th {
-    text-align:center;
-} */
 table, th, td {
-    border: 5px solid #f1f1f1;
+    border: 2px solid black;
     text-align: center;
+}
+tr th {
+    background:black;
+    color:white;
 }
 tr td {
     padding: 10px;
     text-align: left;
 }
 
-.dropdown {
-    overflow: hidden;
-}
-.dropdown .dropbtn {
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 14px;
-    background-color: blue;
-    margin: 0;
-}
-.dropcontent a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropcontent a:hover {
-    background-color: #ddd;
+@media (min-width:48em) {
+    .std {
+        margin-left: 80%;
+    }
 }
