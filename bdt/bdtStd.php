@@ -29,7 +29,7 @@
 </head>
 <body>
     <header>
-       <h3>Student Assesment Details</h3>
+       <h2>Student Assesment Details</h2>
         <form action = './bdt.php'><button class = 'std'>Return to SBA</button></form>
     </header>
 
@@ -49,20 +49,8 @@
         <label>Project(max 15)</label><br>
         <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' required/><br>
 
-        <!-- <label>Total(total class score 60)</label><br>
-        <input name='total60' id ='stdscore' type = 'number' min = '0' max = '60' step = 'any' required/><br>
-
-        <label>Total 50%(total class score scaled to 50%)</label><br>
-        <input name='total50' id = 'to50' type ='number' min = '0'  max = '50' step = 'any' required/><br> -->
-
         <label>Exams Score(100%)</label><br>
         <input name='exams' type ='number' id= 'exams' min = '0' max = '100' step = 'any' required/><br>
-
-        <!-- <label>Total 50% (thus exams scaled to 50%)</label><br>
-        <input name='exams50' type ='number' id='scalex' min = '0' max = '50' step = 'any' required/><br>
-
-        <label>Total 100% (class score scaled to 50% plus exams scaled to 50%)</label><br>
-        <input name='total100' type ='number' min = '0' max = '100' step = 'any' required/><br> -->
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
@@ -86,11 +74,8 @@ if(isset($_POST['submit'])) {
     $query = "INSERT INTO bdt (student_name,individual_test,class_test,group_work,project,total_60,total_50,exams,exams_50,total_100) VALUES ('$stdName', $indTest, $classTest, $groupWork, $project, $total60, $total50, $exams, $exams50, $total100)";
     $result = mysqli_query($connect, $query);
     if($result) {
-        echo 'data inserted';
-    }else {
-        echo mysqli_error($connect);
+        echo "<h4 style='color:green;text-align:center'>$stdName has been Added</h4>";
     }
-
 }
 ?>
     

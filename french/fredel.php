@@ -33,7 +33,7 @@
             $query = "DELETE FROM french WHERE student_name='$stdName'";
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo $stdName. 'deleted';
+                echo "<h4 style='color:red; text-align:center'>$stdName  Deleted</h6>";
             }else {
                 mysqli_error($connect);
             }
@@ -43,9 +43,7 @@
             $query = "DELETE FROM french";
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo  'all records deleted';
-            }else {
-                mysqli_error($connect);
+                echo  "<h4 style='color:red; text-align:center'>ALL Records Deleted</h4>";
             }
         }
 

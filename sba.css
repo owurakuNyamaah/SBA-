@@ -90,8 +90,8 @@ body {
 .myslides {
     display: none;
     width:100%;
-    height: 500px;
-    padding: 15px
+    height: 300px;
+    padding: 30px
 }
 
 
@@ -100,5 +100,12 @@ body {
     text-align: right;
     width: 100%;
     height: 45px;
+    padding: 15px;
 }
 
+@media (min-width:48em) {
+    .myslides {
+        height: 500px;
+        padding: 30px 50px;
+    }
+}

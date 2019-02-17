@@ -52,9 +52,7 @@
             <img src = './images/2.jpg' alt='student pic' class = 'myslides'/>
             <img src = './images/3.jpg' alt='student pic' class = 'myslides'/>
             <img src = './images/4.jpg' alt='student pic' class = 'myslides'/>
-            <img src = './images/5.jpg' alt='student pic' class = 'myslides'/>
             <img src = './images/6.jpg' alt='student pic' class = 'myslides'/>
-            <img src = './images/logo.jpg' alt='student pic' class = 'myslides'/>
         </div>
         <script>
             var slideIndex = 0;

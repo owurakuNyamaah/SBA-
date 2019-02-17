@@ -27,8 +27,9 @@
 h1 {
     text-align: center;
 }
+
 .std, .edit, .del {
-    background-color: rgba(0, 0, 0, 0.377);
+    background-color: rgba(2, 0, 0, 0.377);
     color:white;
     margin-left:10px;
     border-radius: 10px;
@@ -43,6 +44,10 @@ form, button {
 }
 .del:hover {
     background-color: red;
+}
+
+.count > span {
+    padding: 0px 20px;
 }
 
 

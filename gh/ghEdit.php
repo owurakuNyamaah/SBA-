@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h3>Edit Student Details</h3>
+        <h2>Edit Student Details</h2>
         <form action = './gh.php'><button class = 'std'>Return to SBA</button></form>
     </header>
 
@@ -30,20 +30,8 @@
         <label>Project(max 15)</label><br>
         <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' required/><br>
 
-        <!-- <label>Total(total class score 60)</label><br>
-        <input name='total60' type = 'number' min = '0' max = '60' step = 'any'/><br>
-
-        <label>Total 50%(total class score scaled to 50%)</label><br>
-        <input name='total50' type ='number'min = '0' max = '50' step = 'any'/><br> -->
-
         <label>Exams Score(100%)</label><br>
         <input name='exams' type ='number' min = '0' max = '100' step = 'any' required/><br>
-
-        <!-- <label>Total 50% (thus exams scaled to 50%)</label><br>
-        <input name='exams50' type ='number' min = '0' max = '50' step = 'any'/><br>
-
-        <label>Total 100% (class score scaled to 50% plus exams scaled to 50%)</label><br>
-        <input name='total100' type ='number' min = '0' max = '100' step = 'any'/><br> -->
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
@@ -82,11 +70,8 @@
 
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo 'data updated';
-            }else {
-                echo mysqli_error($connect);
+                echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
             }
-        
         }
         mysqli_close($connect);
         

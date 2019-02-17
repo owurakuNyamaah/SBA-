@@ -43,9 +43,7 @@
             $query = "DELETE FROM social";
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo  'all records deleted';
-            }else {
-                mysqli_error($connect);
+                echo  "<h4 style='color:red; text-align:center'>ALL Records Deleted</h4>";
             }
         }
 
