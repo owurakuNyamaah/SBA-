@@ -22,27 +22,30 @@
         <form action='./socdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
             <span>
+            Number of Students =   
             <?php 
                  $connect = mysqli_connect('localhost','root','','sba');
                  $sql = "SELECT COUNT(student_name) AS numStd FROM social";
                  $result = mysqli_query($connect, $sql);
                  while($row = mysqli_fetch_assoc($result)) {
-                     echo "Number of Student = $row[numStd]";
+                     echo $row['numStd'];
                  }
             ?>
             </span>
             <span>
+            Average Score =  
             <?php 
                 $sql = "SELECT ROUND(AVG(total_100), 3) AS average FROM social";
                 $result = mysqli_query($connect, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "Average Score = $row[average]";
+                    echo "$row[average]";
                 }
             ?>
             </span>
             <span>
                 <form method='post' action='social.php'>
-                    Search Student : <input type='search' name='stdSearch'/>
+                    Search Student :  
+                    <input type='search' name='stdSearch'/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>
