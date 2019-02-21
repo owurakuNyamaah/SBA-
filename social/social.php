@@ -13,6 +13,7 @@
             <a href = '../index.php'>HOME</a>
             <a href = '../sba.php'>SBA</a>
             <a href = '../position.php'>POSITIONS</a>
+            <a href = '../report.php'>REPORTS</a>
     </header>
     
     <main>
@@ -22,30 +23,27 @@
         <form action='./socdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
             <span>
-            Number of Students =   
-            <?php 
-                 $connect = mysqli_connect('localhost','root','','sba');
-                 $sql = "SELECT COUNT(student_name) AS numStd FROM social";
-                 $result = mysqli_query($connect, $sql);
-                 while($row = mysqli_fetch_assoc($result)) {
-                     echo $row['numStd'];
-                 }
-            ?>
+               <?php 
+                    $connect = mysqli_connect('localhost','root','','sba');
+                    $sql = "SELECT COUNT(student_name) AS numStd FROM social";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
+                        echo "Nummber of Students = $row[numStd]";
+                    }
+               ?> 
             </span>
             <span>
-            Average Score =  
-            <?php 
-                $sql = "SELECT ROUND(AVG(total_100), 3) AS average FROM social";
-                $result = mysqli_query($connect, $sql);
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "$row[average]";
-                }
-            ?>
+                <?php 
+                    $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM social";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
+                        echo "Average Score = $row[average]";
+                    }
+                ?>
             </span>
             <span>
-                <form method='post' action='social.php'>
-                    Search Student :  
-                    <input type='search' name='stdSearch'/>
+                <form method = 'post' action = 'social.php'>
+                    Search Student <input type = 'search' name='stdSearch'/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>

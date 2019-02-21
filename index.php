@@ -25,6 +25,7 @@
         <a href = './index.php'>HOME</a>
         <a href = './sba.php'>SBA</a>
         <a href = './position.php'>POSITIONS</a>
+        <a href = './report.php'>REPORTS</a>
     </div>
     <!-- notification message-->
     <div style='text-align:right;font-size:large;'>

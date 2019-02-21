@@ -13,6 +13,7 @@
             <a href = '../index.php'>HOME</a>
             <a href = '../sba.php'>SBA</a>
             <a href = '../position.php'>POSITIONS</a>
+            <a href = '../report.php'>REPORTS</a>
     </header>
     
     <main>
@@ -20,30 +21,29 @@
         <form action = './ictStd.php'><button class = 'std'>ADD student</button></form>
         <form action = './ictEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./ictdel.php'><button class = 'del'>Delete</button></form>
-        <div class='count'>
+        <div class = 'count'>
             <span>
-            <?php
-                $connect = mysqli_connect('localhost','root','','sba');
-                $query = "SELECT COUNT(student_name) as numStds FROM ict";
-                $result = mysqli_query($connect, $query);
-                while($row=mysqli_fetch_assoc($result)) {
-                    echo "Number of Students = $row[numStds]";
-                }
-            ?>
+               <?php 
+                    $connect = mysqli_connect('localhost','root','','sba');
+                    $sql = "SELECT COUNT(student_name) AS numStd FROM ict";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
+                        echo "Nummber of Students = $row[numStd]";
+                    }
+               ?> 
             </span>
             <span>
                 <?php 
-                    $query = "SELECT ROUND(AVG(total_100),3) AS average FROM ict";
-                    $result = mysqli_query($connect, $query);
-                    while($row = mysqli_fetch_assoc($result)) {
+                    $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM ict";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
                         echo "Average Score = $row[average]";
                     }
                 ?>
             </span>
             <span>
-                <form method='post' action='ict.php'>
-                    Search Student :
-                    <input type='search' name='stdSearch'>
+                <form method = 'post' action = 'ict.php'>
+                    Search Student <input type = 'search' name='stdSearch'/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>
@@ -69,7 +69,7 @@
                     if(mysqli_num_rows($result) > 0) {
                         echo "<table>
                         <tr>
-                            <th>STUDENT NAME</th>
+                            <th>NAME</th>
                             <th>INDIVIDUAL TEST(15)</th>
                             <th>CLASS TEST(15)</th>
                             <th>GROUP WORK(15)</th>
@@ -100,7 +100,7 @@
                     } else {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
@@ -144,7 +144,7 @@
                     if(mysqli_num_rows($result) > 0 ) {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
@@ -175,7 +175,7 @@
                     }else {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>

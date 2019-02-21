@@ -13,6 +13,7 @@
         <a href = '../index.php'>HOME</a>
         <a href = '../sba.php'>SBA</a>
         <a href = '../position.php'>POSITIONS</a>
+        <a href = '../report.php'>REPORTS</a>
     </header>
 
     <main>
@@ -52,7 +53,7 @@
                         echo "<tr>
                                 <td>$row[student_name]</td>
                                 <td>$row[total_100]</td>
-                                <td>$row[position]</td>
+                                <td style= 'color:red'>$row[position]</td>
                             </tr>";
                     }
                     echo "</table>";                     

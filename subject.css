@@ -17,8 +17,8 @@
     text-decoration: none;
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 140%;
+    padding: 5px;
+    font-size: 120%;
 }
 .header a:hover {
     background: rgba(0, 0, 0, 0.377);
@@ -28,7 +28,7 @@ h1 {
     text-align: center;
 }
 
-.std, .edit, .del {
+.std, .edit, .del  {
     background-color: rgba(2, 0, 0, 0.377);
     color:white;
     margin-left:10px;
@@ -45,7 +45,9 @@ form, button {
 .del:hover {
     background-color: red;
 }
-
+.count {
+    padding: 3px 0px;
+}
 .count > span {
     padding: 0px 20px;
 }
@@ -68,8 +70,44 @@ tr td {
     text-align: left;
 }
 
+input[type='text'] {
+    width: 50%;
+    padding: 5px;
+    margin: 5px 0 10px 50px;
+    border: none;
+    background: #f1f1f1;
+}
+
+.container {
+    padding: 50px;
+}
+
+.report {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 5px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    font-weight: bold;
+}
+
+
 @media (min-width:48em) {
     .std {
         margin-left: 80%;
     }
+    .header a {
+        padding:15px;
+        font-size:140%;
+    }
+    .report {
+        width:10%;
+    }
+    input[type='text'] {
+        width:35%;
+    }
+
 }

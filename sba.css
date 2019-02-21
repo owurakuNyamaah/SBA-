@@ -18,8 +18,8 @@ body {
     text-decoration: none;
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 140%;
+    padding: 5px;
+    font-size: 120%;
 }
 .header a:hover {
     background: rgba(0, 0, 0, 0.377);
@@ -53,36 +53,38 @@ body {
     height: 65px;
     display: block;
     text-align:center;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 .english {
-    background: rgba(244, 165, 96, 0.918);
+    background: #59253A;
 }
 .math {
-    background:rgba(30, 143, 255);
+    background: #78244C;
 }
 .social {
-    background: rgba(0, 128, 0);
+    background: #59253A;
 }
 .science {
-    background: rgba(165, 42, 42, 0.842);
+    background: #78244C;
 }
 .rme {
-    background: rgba(238, 130, 238, 0.863);
+    background: #78244C;
 }
 .ict {
-    background: rgba(128, 128, 128);
+    background: #59253A;
 }
 .bdt{
-    background: rgba(0, 153, 255);
+    background: #59253A;
 }
 .french {
-    background: rgba(153, 205, 50);
+    background: #78244C;
 }
 .gh {
-    background: rgba(0, 0, 0, 0.616);
+    background: #59253A;
 }
-
+.allpos, .asses {
+    background: #78244C;
+}
 .container a:hover {
     opacity : 1;
 }
@@ -99,13 +101,30 @@ body {
     background-color: rgba(0, 38, 255, 0.13);
     text-align: right;
     width: 100%;
-    height: 45px;
-    padding: 15px;
+    height: 40px;
+    padding: 5px;
 }
 
 @media (min-width:48em) {
     .myslides {
-        height: 500px;
-        padding: 30px 50px;
+        height: 590px;
+        padding: 20px 60px;
+    }
+    .row::after {
+        display: table;
+        content:'';
+        clear:both;
+    }
+    [class*='col-'] {
+        float:left;
+    }
+    .col-1, .col-2 {
+        width:50%;
+        padding:0 30px;
+    }
+    
+    .header a {
+        padding:5px 10px;
+        font-size:140%;
     }
 }

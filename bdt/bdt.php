@@ -13,6 +13,7 @@
         <a href = '../index.php'>HOME</a>
         <a href = '../sba.php'>SBA</a>
         <a href = '../position.php'>POSITIONS</a>
+        <a href = '../report.php'>REPORTS</a>
     </header>
     
     <main>
@@ -20,34 +21,34 @@
         <form action = './bdtStd.php'><button class = 'std'>ADD student</button></form>
         <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./bdtdel.php'><button class = 'del'>Delete</button></form>
-        <div class='count'>
+        <div class = 'count'>
             <span>
-            <?php
-                $connect = mysqli_connect('localhost','root','','sba');
-                $query = "SELECT COUNT(student_name) as numStds FROM bdt";
-                $result = mysqli_query($connect, $query);
-                while($row=mysqli_fetch_assoc($result)) {
-                    echo "Number of Students = $row[numStds]";
-                }
-            ?>
+               <?php 
+                    $connect = mysqli_connect('localhost','root','','sba');
+                    $sql = "SELECT COUNT(student_name) AS numStd FROM bdt";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
+                        echo "Nummber of Students = $row[numStd]";
+                    }
+               ?> 
             </span>
             <span>
                 <?php 
-                    $query = "SELECT ROUND(AVG(total_100),3) AS average FROM bdt";
-                    $result = mysqli_query($connect, $query);
-                    while($row = mysqli_fetch_assoc($result)) {
+                    $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM bdt";
+                    $result = mysqli_query($connect, $sql);
+                    while($row=mysqli_fetch_assoc($result)) {
                         echo "Average Score = $row[average]";
                     }
                 ?>
             </span>
             <span>
-                <form method='post' action='bdt.php'>
-                    Search Student :
-                    <input type='search' name='stdSearch'>
+                <form method = 'post' action = 'bdt.php'>
+                    Student Search: <input type = 'search' name='stdSearch'/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>
         </div>
+
         <div style = 'overflow-x:auto'>
             <?php 
                 if(isset($_POST['search'])) {
@@ -68,19 +69,19 @@
                     $result = mysqli_query($connect, $query);
                     if(mysqli_num_rows($result) > 0) {
                         echo "<table>
-                        <tr>
-                            <th>STUDENT NAME</th>
-                            <th>INDIVIDUAL TEST(15)</th>
-                            <th>CLASS TEST(15)</th>
-                            <th>GROUP WORK(15)</th>
-                            <th>PROJECT WORK(15)</th>
-                            <th>TOTAL(60)</th>
-                            <th>TOTAL 50%</th>
-                            <th>EXAMS</th>
-                            <th>EXAMS 50%</th>
-                            <th>TOTAL 100%</th>
-                            <th>REMARKS</th>
-                        </tr>";
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>INDIVIDUAL TEST(15)</th>
+                                    <th>CLASS TEST(15)</th>
+                                    <th>GROUP WORK(15)</th>
+                                    <th>PROJECT WORK(15)</th>
+                                    <th>TOTAL(60)</th>
+                                    <th>TOTAL 50%</th>
+                                    <th>EXAMS</th>
+                                    <th>EXAMS 50%</th>
+                                    <th>TOTAL 100%</th>
+                                    <th>REMARKS</th>
+                                </tr>";
                         while($row=mysqli_fetch_assoc($result)) {
                             echo "<tr>
                                     <td>$row[student_name]</td>
@@ -89,10 +90,10 @@
                                     <td>$row[group_work]</td>
                                     <td>$row[project]</td>
                                     <td>$row[total_60]</td>
-                                    <td>$row[total_50]</td>
+                                    <td style='color:blue;'>$row[total_50]</td>
                                     <td>$row[exams]</td>
-                                    <td>$row[exams_50]</td>
-                                    <td>$row[total_100]</td>
+                                    <td style='color:blue;'>$row[exams_50]</td>
+                                    <td style='color:red;'>$row[total_100]</td>
                                     <td>$row[remarks]</td>
                                 </tr>";
                         }
@@ -100,7 +101,7 @@
                     } else {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
@@ -144,7 +145,7 @@
                     if(mysqli_num_rows($result) > 0 ) {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
@@ -164,10 +165,10 @@
                                     <td>$row[group_work]</td>
                                     <td>$row[project]</td>
                                     <td>$row[total_60]</td>
-                                    <td>$row[total_50]</td>
+                                    <td style='color:blue';>$row[total_50]</td>
                                     <td>$row[exams]</td>
-                                    <td>$row[exams_50]</td>
-                                    <td>$row[total_100]</td>
+                                    <td style='color:blue'>$row[exams_50]</td>
+                                    <td style='color:red'>$row[total_100]</td>
                                     <td>$row[remarks]</td>
                                 </tr>";
                         }
@@ -175,7 +176,7 @@
                     }else {
                         echo "<table>
                                 <tr>
-                                    <th>STUDENT NAME</th>
+                                    <th>NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>

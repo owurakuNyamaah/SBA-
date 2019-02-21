@@ -58,7 +58,10 @@ a {
 }
 
 @media (min-width: 48em) {
+    .container {
+       padding-left: 50px;
+    }
     input[type=text],input[type=password], .regbutton, hr {
-        width: 70%;
+        width: 50%;
     }
 }
