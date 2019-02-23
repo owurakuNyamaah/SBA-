@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Social SBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
     <script src="main.js"></script>
@@ -43,7 +43,7 @@
             </span>
             <span>
                 <form method = 'post' action = 'social.php'>
-                    Search Student <input type = 'search' name='stdSearch'/>
+                    Search Student <input type = 'search' name='stdSearch' required/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>
@@ -98,10 +98,10 @@
                                     <td>$row[group_work]</td>
                                     <td>$row[project]</td>
                                     <td>$row[total_60]</td>
-                                    <td>$row[total_50]</td>
+                                    <td style='color:blue;'>$row[total_50]</td>
                                     <td>$row[exams]</td>
-                                    <td>$row[exams_50]</td>
-                                    <td>$row[total_100]</td>
+                                    <td style='color:blue;'>$row[exams_50]</td>
+                                    <td style='color:red;'>$row[total_100]</td>
                                     <td>$row[remarks]</td>
                                 </tr>";
                         }
@@ -171,10 +171,10 @@
                                     <td>$row[group_work]</td>
                                     <td>$row[project]</td>
                                     <td>$row[total_60]</td>
-                                    <td>$row[total_50]</td>
+                                    <td style='color:blue;'>$row[total_50]</td>
                                     <td>$row[exams]</td>
-                                    <td>$row[exams_50]</td>
-                                    <td>$row[total_100]</td>
+                                    <td style='color:blue;'>$row[exams_50]</td>
+                                    <td style='color:red;'>$row[total_100]</td>
                                     <td>$row[remarks]</td>
                                 </tr>";
                         }

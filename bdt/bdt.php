@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>BDT SBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <header class = 'header'>
@@ -43,7 +42,7 @@
             </span>
             <span>
                 <form method = 'post' action = 'bdt.php'>
-                    Student Search: <input type = 'search' name='stdSearch'/>
+                    Student Search: <input type = 'search' name='stdSearch' required/>
                     <button type='submit' name='search'>Search</button>
                 </form>
             </span>

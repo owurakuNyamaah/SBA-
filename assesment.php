@@ -52,7 +52,9 @@
         echo "</h2>"
 ?>
 
-
+    <div class='perform'>
+        <div class='row'>
+        <div class = 'col-1'>
         <h3>ENGLISH</h3>
         <ul style='list-style-type:square'>
         <?php
@@ -175,6 +177,39 @@
         ?>
         </ul>
 
+        <h3>GHANAIAN LANGUAGE</h3>
+        <ul>
+        <?php 
+        $sql1 = "SELECT ROUND(MAX(exams),1) AS exams FROM gh";
+        $result1 = mysqli_query($connect, $sql1); 
+        echo "<li>Exams Highest score = "; while($row=mysqli_fetch_assoc($result1)){echo $row['exams'];}
+        echo "</li>";
+
+        $sql2 = "SELECT ROUND(MIN(exams),1) AS exams FROM gh";
+        $result2 = mysqli_query($connect, $sql2); 
+        echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
+        echo "</li>";
+
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM gh WHERE total_100 >= 40 ";
+        $result3 = mysqli_query($connect, $sql3); 
+        echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
+        echo "</li>";
+
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM gh WHERE total_100 <= 40 ";
+        $result4 = mysqli_query($connect, $sql4); 
+        echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
+        echo "</li>";
+
+        $sql5 = "SELECT student_name FROM gh WHERE total_100 = (SELECT MAX(total_100) FROM gh)  ";
+        $result5 = mysqli_query($connect, $sql5); 
+        echo "<li>Best Student is "; while($row=mysqli_fetch_assoc($result5)){echo $row['student_name'];}
+        echo "</li>";
+        ?>
+        </ul>
+
+        </div>
+
+        <div class = 'col-2'>
         <h3>INFORMATION AND COMMUNICATION TECHNOLOGY</h3>
         <ul>
         <?php 
@@ -265,36 +300,6 @@
         ?>
         </ul>
 
-        <h3>GHANAIAN LANGUAGE</h3>
-        <ul>
-        <?php 
-        $sql1 = "SELECT ROUND(MAX(exams),1) AS exams FROM gh";
-        $result1 = mysqli_query($connect, $sql1); 
-        echo "<li>Exams Highest score = "; while($row=mysqli_fetch_assoc($result1)){echo $row['exams'];}
-        echo "</li>";
-
-        $sql2 = "SELECT ROUND(MIN(exams),1) AS exams FROM gh";
-        $result2 = mysqli_query($connect, $sql2); 
-        echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
-        echo "</li>";
-
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM gh WHERE total_100 >= 40 ";
-        $result3 = mysqli_query($connect, $sql3); 
-        echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
-        echo "</li>";
-
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM gh WHERE total_100 <= 40 ";
-        $result4 = mysqli_query($connect, $sql4); 
-        echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
-        echo "</li>";
-
-        $sql5 = "SELECT student_name FROM gh WHERE total_100 = (SELECT MAX(total_100) FROM gh)  ";
-        $result5 = mysqli_query($connect, $sql5); 
-        echo "<li>Best Student is "; while($row=mysqli_fetch_assoc($result5)){echo $row['student_name'];}
-        echo "</li>";
-        ?>
-        </ul>
-
         <h3>FRENCH</h3>
         <ul>
         <?php 
@@ -323,7 +328,9 @@
         echo "<li>Best Student is "; while($row=mysqli_fetch_assoc($result5)){echo $row['student_name'];}
         echo "</li>";
         ?>
-        </ul>   
+        </ul>
+        </div>
+        </div>
     </main>
 
 

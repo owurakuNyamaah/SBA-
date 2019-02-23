@@ -57,7 +57,7 @@ table {
     border-collapse: collapse;
     width:100%;
 }
-table, th, td {
+table, tr, th, td {
     border: 2px solid black;
     text-align: center;
 }
@@ -71,27 +71,33 @@ tr td {
 }
 
 input[type='text'] {
-    width: 50%;
+    width: 45%;
     padding: 5px;
-    margin: 5px 0 10px 50px;
+    margin: 5px 0 10px 10px;
     border: none;
     background: #f1f1f1;
 }
 
 .container {
-    padding: 50px;
+    padding: 20px 0 0 10px;
 }
 
 .report {
     background-color: dodgerblue;
     color: white;
     padding: 5px 5px;
-    margin-left: 50px;
+    margin-left: 10px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     width: 25%;
     font-weight: bold;
+}
+.reportHead>p {
+    padding:8px;
+}
+.marks > span {
+    padding: 15px;
 }
 
 
@@ -100,8 +106,9 @@ input[type='text'] {
         margin-left: 80%;
     }
     .header a {
-        padding:15px;
+        padding:5px 10px;
         font-size:140%;
+
     }
     .report {
         width:10%;

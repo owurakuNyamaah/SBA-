@@ -54,8 +54,8 @@
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
                                 <td>$row[student_name]</td>
-                                <td>$row[total_100]</td>
-                                <td>$row[position]</td>
+                                <td style='text-align:center;'>$row[total_100]</td>
+                                <td style='color:red;text-align:center;'>$row[position]</td>
                             </tr>";
                     }
                     echo "</table>";                     

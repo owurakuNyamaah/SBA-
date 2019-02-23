@@ -105,6 +105,13 @@ body {
     padding: 5px;
 }
 
+.perform {
+    margin: 30px 80px;
+}
+.perform ul {
+    padding: 20px 50px;
+}
+
 @media (min-width:48em) {
     .myslides {
         height: 590px;
