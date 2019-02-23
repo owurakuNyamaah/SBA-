@@ -22,48 +22,56 @@
         <div style = 'overflow-x:auto'>
             <?php 
                 $connect = mysqli_connect('localhost','root','','sba');
-                $sql = "SET @current := 0,@prev := NULL,@add := 1;";
-                $result = mysqli_query($connect,$sql);
-                $query = 
-                " SELECT
-                eng.student_name,
-                eng.total_100 AS ENGLISH,
-                science.total_100 AS SCIENCE,
-                maths.total_100 AS MATHS,
-                social.total_100 AS SOCIAL,
-                ict.total_100 AS ICT,
-                bdt.total_100 AS BDT,
-                rme.total_100 AS RME,
-                gh.total_100 AS GH,
-                french.total_100 AS FRENCH,
-                (
-                    eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + ict.total_100 + bdt.total_100 + rme.total_100 + gh.total_100 + french.total_100
-                ) AS TOTAL,
-                @current := IF(
-                    @prev =(
-                        eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + ict.total_100 + bdt.total_100 + rme.total_100 + gh.total_100 + french.total_100
-                    ),
-                    @current,
-                    @add
-                ) AS POSITION,
-                @prev :=(
-                    eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + ict.total_100 + bdt.total_100 + rme.total_100 + gh.total_100 + french.total_100
-                ),
+                
+                $query = "SELECT
+                *,
+                @current := IF(@prev = TOTAL, @current, @add) AS POSITION,
+                @prev := TOTAL,
                 @add := @add +1
             FROM
-                eng
-            INNER JOIN science ON eng.student_name = science.student_name
-            INNER JOIN maths ON eng.student_name = maths.student_name
-            INNER JOIN social ON eng.student_name = social.student_name
-            INNER JOIN ict ON eng.student_name = ict.student_name
-            INNER JOIN bdt ON eng.student_name = bdt.student_name
-            INNER JOIN rme ON eng.student_name = rme.student_name
-            INNER JOIN gh ON eng.student_name = gh.student_name
-            INNER JOIN french ON eng.student_name = french.student_name
+                (
+                SELECT
+                    @current := 0,
+                    @prev := NULL,
+                    @add := 1
+            ) r,
+            (
+                SELECT
+                    *,
+                    (
+                        ENGLISH + SCIENCE + MATHS + SOCIAL + ICT + BDT + RME + GH + FRENCH
+                    ) AS TOTAL
+                FROM
+                    (
+                    SELECT
+                        eng.student_name AS STUDENT,
+                        eng.total_100 AS ENGLISH,
+                        science.total_100 AS SCIENCE,
+                        maths.total_100 AS MATHS,
+                        social.total_100 AS SOCIAL,
+                        ict.total_100 AS ICT,
+                        bdt.total_100 AS BDT,
+                        rme.total_100 AS RME,
+                        gh.total_100 AS GH,
+                        french.total_100 AS FRENCH
+                    FROM
+                        `eng`
+                    INNER JOIN science ON eng.student_name = science.student_name
+                    INNER JOIN maths ON eng.student_name = maths.student_name
+                    INNER JOIN social ON eng.student_name = social.student_name
+                    INNER JOIN ict ON eng.student_name = ict.student_name
+                    INNER JOIN bdt ON eng.student_name = bdt.student_name
+                    INNER JOIN rme ON eng.student_name = rme.student_name
+                    INNER JOIN gh ON eng.student_name = gh.student_name
+                    INNER JOIN french ON eng.student_name = french.student_name
+                ) AS DT
+            GROUP BY
+                STUDENT
+            ) AS DERIVED
             ORDER BY
                 TOTAL
             DESC";
-            
+                            
                 $result = mysqli_query($connect, $query);
                 
                 if(mysqli_num_rows($result) > 0 ) {
@@ -84,7 +92,7 @@
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
-                                <td>$row[student_name]</td>
+                                <td>$row[STUDENT]</td>
                                 <td>$row[ENGLISH]</td>
                                 <td>$row[SCIENCE]</td>
                                 <td>$row[MATHS]</td>

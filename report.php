@@ -264,17 +264,33 @@
         INNER JOIN french ON eng.student_name=french.student_name WHERE eng.student_name='$std' ";
         $query = mysqli_query($connect, $sum);
 
-        $set = "SET @current:=0,@prev:=null,@add:=1;";
-        $qset = mysqli_query($connect,$set);
-        $position ="SELECT student, POSITION FROM(SELECT eng.student_name AS student,(eng.total_100+science.total_100+maths.total_100+social.total_100+rme.total_100+bdt.total_100+
-        ict.total_100+gh.total_100+french.total_100) AS total, @current:=IF(@prev=(eng.total_100+science.total_100+maths.total_100+social.total_100+rme.total_100+bdt.total_100+
-        ict.total_100+gh.total_100+french.total_100),@current,@add) AS POSITION,@prev:=(eng.total_100+science.total_100+maths.total_100+social.total_100+rme.total_100+bdt.total_100+
-        ict.total_100+gh.total_100+french.total_100),@add:=@add+1 FROM eng INNER JOIN science ON eng.student_name=science.student_name
-        INNER JOIN maths ON maths.student_name=eng.student_name INNER JOIN social ON eng.student_name=social.student_name 
-        INNER JOIN rme ON eng.student_name=rme.student_name INNER JOIN bdt on eng.student_name=bdt.student_name 
-        INNER JOIN ict ON eng.student_name=ict.student_name INNER JOIN gh ON eng.student_name=gh.student_name 
-        INNER JOIN french ON eng.student_name=french.student_name ORDER BY total DESC) AS der WHERE student= '$std' ";
-        $qpos = mysqli_query($connect, $position);
+        $position = "SELECT POSITION FROM (
+            SELECT STUDENT,TOTAL,@current := IF(@prev = TOTAL, @current, @add) AS POSITION,@prev := TOTAL,@add := @add +1
+            FROM(
+            SELECT @current := 0,@prev := NULL,@add := 1) r,(SELECT STUDENT,(ENGLISH + SCIENCE + MATHS + SOCIAL + ICT + 
+                    BDT + RME + GH + FRENCH) AS TOTAL
+            FROM(
+            SELECT eng.student_name AS STUDENT,eng.total_100 AS ENGLISH,science.total_100 AS SCIENCE,
+                    maths.total_100 AS MATHS,social.total_100 AS SOCIAL,ict.total_100 AS ICT,bdt.total_100 AS BDT,
+                    rme.total_100 AS RME,gh.total_100 AS GH,french.total_100 AS FRENCH
+            FROM
+                `eng`
+            INNER JOIN science ON eng.student_name = science.student_name
+            INNER JOIN maths ON eng.student_name = maths.student_name
+            INNER JOIN social ON eng.student_name = social.student_name
+            INNER JOIN ict ON eng.student_name = ict.student_name
+            INNER JOIN bdt ON eng.student_name = bdt.student_name
+            INNER JOIN rme ON eng.student_name = rme.student_name
+            INNER JOIN gh ON eng.student_name = gh.student_name
+            INNER JOIN french ON eng.student_name = french.student_name
+            ) AS derived_join
+            GROUP BY
+                STUDENT
+            ) AS derived_total
+            ORDER BY
+                TOTAL
+            DESC) AS derived_position WHERE STUDENT='$std' ";
+            $qpos = mysqli_query($connect, $position);
 
 
         if(mysqli_num_rows($resultC) > 0 ||mysqli_num_rows($qsciC)>0 ||mysqli_num_rows($qmathsC)>0 ||mysqli_num_rows($qsocC)>0) {
