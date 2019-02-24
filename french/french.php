@@ -124,7 +124,7 @@
                                 <th>REMARKS</th>
                             </tr>
                         </table>";
-                        echo "<h1 style='padding:50px'>Search can not be found</h1>";
+                        echo "<h1 style='padding:50px'>$search could not be found</h1>";
                 }
             }
 
@@ -201,7 +201,7 @@
                                 <th>REMARKS</th>
                             </tr>
                         </table>";
-                    echo "<h1 style='padding:50px'>Zero Students added</h1>";
+                    echo "<h1 style='padding:50px'>NO Student added</h1>";
                 }
             }
 

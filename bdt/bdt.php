@@ -16,7 +16,7 @@
     </header>
     
     <main>
-        <h1>BDT S.B.A</h1>
+        <h1>Basic Design And Technology SBA</h1>
         <form action = './bdtStd.php'><button class = 'std'>ADD student</button></form>
         <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./bdtdel.php'><button class = 'del'>Delete</button></form>
@@ -113,7 +113,7 @@
                                     <th>REMARKS</th>
                                 </tr>
                             </table>";
-                        echo "<h1 style='padding:50px'>Search can not be found</h1>";
+                        echo "<h1 style='padding:50px'>$search could not be found</h1>";
                     }
                 }
                 if(!isset($_POST['search'])) {
@@ -188,7 +188,7 @@
                                     <th>REMARKS</th>
                                 </tr>
                             </table>";
-                        echo "<h1 style='padding:50px'>No sudented added</h1>";
+                        echo "<h1 style='padding:50px'>No student added</h1>";
                     }
                         
                 }

@@ -28,7 +28,7 @@
             </div>
             <div class = 'col-2'>
                 <a href='./rme/rmePos.php' class = 'rme'>RELIGIOUS AND MORAL EDUCATION</a>
-                <a href='./bdt/bdtPos.php' class = bdt>BDT</a>
+                <a href='./bdt/bdtPos.php' class = bdt>BASIC DESIGN AND TECHNOLOGY</a>
                 <a href='./french/frenchPos.php' class = 'french'>FRENCH</a>
                 <a href='./gh/ghPos.php' class = 'gh'>GHANAIAN LANGUAGE</a>
                 <a href = './overall.php' class = 'allpos'>OVERALL POSITIONS</a>

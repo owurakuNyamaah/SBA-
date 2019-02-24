@@ -36,7 +36,9 @@
             };
             //logged in user information
             if(isset($_SESSION['username'])) {
-                echo $_SESSION['username'] . "<span><a href = 'index.php?logout='1' style='color:red;padding:10px;'>logout</a>
+                echo "<span>
+                $_SESSION[username] <a href = 'index.php?logout='1' style='background:grey;color:white;padding:5px;
+                margin:0 10px;text-decoration:none;'>logout</a>
                 </span>";
             };
         ?>
@@ -44,7 +46,7 @@
     <main>
         <h3 style='padding-left:15px'>SBA made simple and efficient</h3>
         <p>Student Based Assessment is an integral part of academia because it enables teachers to record and rank the 
-            performance of their students. This website is designed to assist teachers to record and the rank the 
+            performance of their students. This web application is designed to assist teachers to record and rank the 
             terminal positions of their students with ease and efficiently.
         </p>
         <div>

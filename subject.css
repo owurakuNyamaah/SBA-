@@ -52,13 +52,12 @@ form, button {
     padding: 0px 20px;
 }
 
-
 table {
-    border-collapse: collapse;
     width:100%;
 }
 table, tr, th, td {
     border: 2px solid black;
+    border-collapse: collapse;
     text-align: center;
 }
 tr th {

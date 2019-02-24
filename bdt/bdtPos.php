@@ -17,7 +17,7 @@
     </header>
 
     <main>
-        <h1>BDT Positions</h1>
+        <h1>Basic Design And Technology Positions</h1>
         <div style = 'overflow-x: auto;'>
 
             <?php 
@@ -53,7 +53,13 @@
                         echo "<tr>
                                 <td>$row[student_name]</td>
                                 <td style='text-align:center;'>$row[total_100]</td>
-                                <td style= 'color:red;tex-align:center'>$row[position]</td>
+                                <td style= 'color:red;text-align:center;'>";
+                                $n = $row['position'];
+                                if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                                else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                                else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                                else {echo $n.'<sup>th</sup>';}
+                        echo    "</td>
                             </tr>";
                     }
                     echo "</table>";                     
@@ -64,10 +70,8 @@
                                 <th>STUDENT NAME</th>
                                 <th>TOTAL 100%</th>
                             </tr>
-                            <tr>
-                                <td>NO Student added</td>
-                            </tr>
                         </table>";
+                    echo "<h1 style='padding:50px'>No student added</h1>";
                 }
 
                 mysqli_close($connect);

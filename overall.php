@@ -103,8 +103,14 @@
                                 <td>$row[GH]</td>
                                 <td>$row[FRENCH]</td>
                                 <td style='color:blue;text-align:center;'>$row[TOTAL]</td>
-                                <td style='color:red;text-align:center;'>$row[POSITION]</td>
-                            </tr>" ;        
+                                <td style= 'color:red;text-align:center;'>";
+                                $n = $row['POSITION'];
+                                if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                                else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                                else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                                else {echo $n.'<sup>th</sup>';}
+                        echo    "</td>
+                            </tr>";
                     }
                     echo "</table>";
                     
@@ -124,10 +130,8 @@
                                 <th>TOTAL</th>
                                 <th>POSITION</th>
                             </tr>
-                            <tr>
-                                <td>ZERO students added</td>
-                            </tr>
                         </table>";
+                    echo "<h1 style='padding:50px'>SBA not complete</h1>";
                 }
 
             mysqli_close($connect);

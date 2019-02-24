@@ -122,7 +122,7 @@
                                     <th>REMARKS</th>
                                 </tr>
                                 </table>";
-                        echo "<h1 style='padding:50px'>Search not found</h1>";
+                        echo "<h1 style='padding:50px'>$search could not found</h1>";
                     }
                 }
                 if(!isset($_POST['search'])) {
@@ -193,8 +193,9 @@
                                     <th>EXAMS 50%</th>
                                     <th>TOTAL 100%</th>
                                     <th>REMARKS</th>
-                                </tr>";
-                        echo "<h1 style='padding:50px'>ZERO student added</h1>";
+                                </tr>
+                                </table>";
+                        echo "<h1 style='padding:50px'>No student added</h1>";
                     }
 
                 }

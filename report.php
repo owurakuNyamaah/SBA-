@@ -297,7 +297,14 @@
             echo "<div class='reportHead'>
                     <p>Name of Student :<big style='color:blue;padding:0 20px'><b>$std</b></big>Year............................................</p>
                     <p>Class......................................................................Term.............................................</p>
-                    <p>No. on Roll............................................................."; echo "Position :<big style='color:red;padding:0 15px;'><b>";while($row=mysqli_fetch_assoc($qpos)){echo $row['POSITION'];} echo "</b></big></p>
+                    <p>No. on Roll............................................................."; echo "Position :<big style='color:red;padding:0 15px;'><b>";
+                    while($row=mysqli_fetch_assoc($qpos)){
+                        $n = $row['POSITION'];
+                        if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'st';}
+                        else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'nd';}
+                        else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'rd';}
+                        else {echo $n.'th';}
+                    } echo "</b></big></p>
                     <p>Next Term Begins.......................................................Date.............................................</p>
                 </div>";
             echo "<table>
@@ -311,7 +318,7 @@
             </tr>";
     
             echo "<tr>
-                <td>ENGLISH LANGUAGE</td>
+                <td>English Language</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row = mysqli_fetch_assoc($resultC)) {echo $row['total_50'];}
             echo "</td>
@@ -322,7 +329,13 @@
                 while($row = mysqli_fetch_assoc($resultT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";
-                while($row = mysqli_fetch_assoc($resultP)) {echo $row['position'];}
+                while($row = mysqli_fetch_assoc($resultP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row = mysqli_fetch_assoc($resultR)) {echo $row['remarks'];}
@@ -330,7 +343,7 @@
                 </tr>";    
                 
             echo "<tr>
-                <td>INTEGRATED SCIENCE</td>
+                <td>Integrated Science</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row = mysqli_fetch_assoc($qsciC)) {echo $row['total_50'];}
             echo "</td>
@@ -341,7 +354,13 @@
                 while($row = mysqli_fetch_assoc($qsciT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";        
-                while($row = mysqli_fetch_assoc($qsciP)) {echo $row['position'];}
+                while($row = mysqli_fetch_assoc($qsciP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row = mysqli_fetch_assoc($qsciR)) {echo $row['remarks'];}
@@ -350,7 +369,7 @@
 
                 
             echo "<tr>
-                <td>MATHEMATICS</td>
+                <td>Mathematics</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row = mysqli_fetch_assoc($qmathsC)) {echo $row['total_50'];}
             echo "</td>
@@ -361,7 +380,13 @@
                 while($row = mysqli_fetch_assoc($qmathsT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";        
-                while($row = mysqli_fetch_assoc($qmathsP)) {echo $row['position'];}
+                while($row = mysqli_fetch_assoc($qmathsP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row = mysqli_fetch_assoc($qmathsR)) {echo $row['remarks'];}
@@ -370,7 +395,7 @@
            
                 
             echo "<tr>
-                <td>SOCIAL STUDIES</td>
+                <td>Social Studies</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row = mysqli_fetch_assoc($qsocC)) {echo $row['total_50'];}
             echo "</td>
@@ -381,7 +406,13 @@
                 while($row = mysqli_fetch_assoc($qsocT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";        
-                while($row = mysqli_fetch_assoc($qsocP)) {echo $row['position'];}
+                while($row = mysqli_fetch_assoc($qsocP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row = mysqli_fetch_assoc($qsocR)) {echo $row['remarks'];}
@@ -389,7 +420,7 @@
                 </tr>"; 
                 
             echo "<tr>
-                <td>ICT</td>
+                <td>Information & communication Technology</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row=mysqli_fetch_assoc($qictC)) {echo $row['total_50'];} 
             echo "</td>
@@ -400,7 +431,13 @@
                 while($row=mysqli_fetch_assoc($qictT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";        
-                while($row=mysqli_fetch_assoc($qictP)) {echo $row['position'];}
+                while($row=mysqli_fetch_assoc($qictP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row=mysqli_fetch_assoc($qictR)) {echo $row['remarks'];}
@@ -408,7 +445,7 @@
                 </tr>";
 
             echo "<tr>
-                <td>BDT</td>
+                <td>Basic Design & Technology</td>
                 <td style='color:blue;text-align:center;'>";        
                 while($row=mysqli_fetch_assoc($qbdtC)) {echo $row['total_50'];} 
             echo "</td>
@@ -419,7 +456,13 @@
                 while($row=mysqli_fetch_assoc($qbdtT)) {echo $row['total_100'];}
             echo "</td>
                 <td style='color:blue;text-align:center;'>";        
-                while($row=mysqli_fetch_assoc($qbdtP)) {echo $row['position'];}
+                while($row=mysqli_fetch_assoc($qbdtP)) {
+                    $n = $row['position'];
+                    if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                    else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                    else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                    else {echo $n.'<sup>th</sup>';}
+                }
             echo "</td>
                 <td style='color:red;text-align:center;'>";
                 while($row=mysqli_fetch_assoc($qbdtR)) {echo $row['remarks'];}
@@ -427,7 +470,7 @@
                 </tr>";
 
             echo "<tr>
-                    <td>RME</td>
+                    <td>Religious & Moral Education</td>
                     <td style='color:blue;text-align:center;'>";        
                     while($row=mysqli_fetch_assoc($qrmeC)) {echo $row['total_50'];}
                 echo "</td>
@@ -438,7 +481,13 @@
                     while($row=mysqli_fetch_assoc($qrmeT)) {echo $row['total_100'];}
                 echo "</td>
                     <td style='color:blue;text-align:center;'>";        
-                    while($row=mysqli_fetch_assoc($qrmeP)) {echo $row['position'];}
+                    while($row=mysqli_fetch_assoc($qrmeP)) {
+                        $n = $row['position'];
+                        if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                        else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                        else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                        else {echo $n.'<sup>th</sup>';}    
+                    }
                 echo "</td>
                     <td style='color:red;text-align:center;'>";
                     while($row=mysqli_fetch_assoc($qrmeR)) {echo $row['remarks'];}
@@ -446,7 +495,7 @@
                 </tr>";
 
                 echo "<tr>
-                    <td>GHANAIAN LANGUAGE</td>
+                    <td>Ghanaian Language</td>
                     <td style='color:blue;text-align:center;'>";        
                     while($row=mysqli_fetch_assoc($qghC)) {echo $row['total_50'];}
                 echo "</td>
@@ -457,7 +506,13 @@
                     while($row=mysqli_fetch_assoc($qghT)) {echo $row['total_100'];}
                 echo "</td>
                     <td style='color:blue;text-align:center;'>";        
-                    while($row=mysqli_fetch_assoc($qghP)) {echo $row['position'];}   
+                    while($row=mysqli_fetch_assoc($qghP)) {
+                        $n = $row['position'];
+                        if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                        else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                        else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                        else {echo $n.'<sup>th</sup>';}    
+                    }   
                 echo "</td>
                     <td style='color:red;text-align:center;'>";
                     while($row=mysqli_fetch_assoc($qghR)) {echo $row['remarks'];}
@@ -465,7 +520,7 @@
                 </tr>";
 
                 echo "<tr>
-                    <td>FRENCH</td>
+                    <td>French</td>
                     <td style='color:blue;text-align:center;'>";        
                     while($row=mysqli_fetch_assoc($qfreC)) {echo $row['total_50'];}
                 echo "</td>
@@ -476,7 +531,13 @@
                     while($row=mysqli_fetch_assoc($qfreT)) {echo $row['total_100'];}
                 echo "</td>
                     <td style='color:blue;text-align:center;'>";        
-                    while($row=mysqli_fetch_assoc($qfreP)) {echo $row['position'];}
+                    while($row=mysqli_fetch_assoc($qfreP)) {
+                        $n = $row['position'];
+                        if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                        else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                        else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                        else {echo $n.'<sup>th</sup>';}    
+                    }
                 echo "</td>
                     <td style='color:red;text-align:center;'>";
                     while($row=mysqli_fetch_assoc($qfreR)) {echo $row['remarks'];}
@@ -515,7 +576,7 @@
                 </div>";
 
         }
-        else{echo "<h1 style='padding:50px'>Student cannot be found</h1>";}
+        else{echo "<h1 style='padding:50px'>$std does not exist</h1>";}
 
     }
 

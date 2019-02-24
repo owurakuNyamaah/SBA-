@@ -33,7 +33,7 @@
             $query = "DELETE FROM maths WHERE student_name='$stdName'";
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo $stdName. 'deleted';
+                echo "<h4 style='color:red; text-align:center'>$stdName Has Been Deleted</h4>";
             }else {
                 mysqli_error($connect);
             }

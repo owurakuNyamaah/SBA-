@@ -18,7 +18,7 @@
     </form>
 
     <form action='socdel.php' method='post' class='container'>
-    <label>click on the button below to delete All records</label><br>
+    <label>Click on the button below to <b>delete All records</b></label><br>
     <button type='submit' name='alldel' class='alldel'>Delete All</button>
     </form>
 
@@ -33,7 +33,7 @@
             $query = "DELETE FROM social WHERE student_name='$stdName'";
             $result = mysqli_query($connect, $query);
             if($result) {
-                echo $stdName. 'deleted';
+                echo "<h4 style='color:red; text-align:center'>$stdName Has Been Deleted</h4>";
             }else {
                 mysqli_error($connect);
             }
