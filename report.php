@@ -14,18 +14,20 @@
 </head>
 <body>
     <header class = 'header'>
-            <a href = './index.php'>HOME</a>
-            <a href = './sba.php'>SBA</a>
-            <a href = './position.php'>POSITIONS</a>
-            <a href = './report.php'>REPORTS</a>
+        <a href = './index.php'>HOME</a>
+        <a href = './Jsba.php'>SBA</a>
+        <a href = './report.php'>REPORTS</a>
     </header>
     <form action='report.php' method='post' class='container'>
         <label>Full Name</label>
         <input name='stdName' type='text' class='inputR' Placeholder="Enter student's name" required/>
         <button type='submit' name='submit' class='report'>SEARCH</button><hr>
     </form>
+    <h2 style='text-align:center;'>KUNSU R/C JUNIOR HIGH SCHOOL</h2>
+    <h3 style='text-align:center;'>P.O Box 53 Mankranso</h3>
+    <h3 style='text-align:center;'>Motto: Obey And Be Free</h3>
     
-    <h2 style='text-align:center;background:green;color:white;width:250px;margin-left:30%;'>TERMINAL REPORT</h2>
+    <h2 style='text-align:center;background:green;color:white;width:250px;margin:0 30%;'>TERMINAL REPORT</h2>
 
     
     <?php 

@@ -11,11 +11,10 @@
 <body>
     <header class = 'header'>
         <a href = './index.php'>HOME</a>
-        <a href = './sba.php'>SBA</a>
-        <a href = './position.php'>POSITIONS</a>
+        <a href = './Jsba.php'>SBA</a>
         <a href = './report.php'>REPORTS</a>
     </header>
-    <h1 style='text-align:center;'>STUDENT BASED ASSESEMENT</h1>
+    <h1 style='text-align:center;'>STUDENT BASED ASSESEMENT FOR JHS 1</h1>
 
     <div class = 'container'>
         <div class = 'row'>
@@ -31,10 +30,14 @@
                 <a href='./bdt/bdt.php' class = bdt>BASIC DESIGN AND TECHONOLOGY</a>
                 <a href='./french/french.php' class = 'french'>FRENCH</a>
                 <a href='./gh/gh.php' class = 'gh'>GHANAIAN LANGUAGE</a>
-                <a href='./assesment.php' class = 'asses'>STUDENTS PERFORMANCE</a>
+                <a href='./assesment.php' class = 'asses'>SUMMARY OF STUDENTS PERFORMANCE</a>
             </div>
         </div>
     </div>
+    <div class='container'>
+        <a href = './overall.php' class = 'allpos'>OVERALL POSITIONS</a>
+    </div>
+
     
 </body>
 </html>

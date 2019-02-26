@@ -23,8 +23,7 @@
 <body>
     <div class = 'header'>
         <a href = './index.php'>HOME</a>
-        <a href = './sba.php'>SBA</a>
-        <a href = './position.php'>POSITIONS</a>
+        <a href = './Jsba.php'>SBA</a>
         <a href = './report.php'>REPORTS</a>
     </div>
     <!-- notification message-->

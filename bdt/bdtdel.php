@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 style='text-align:center'>Delete Student</h1>
-    <form action = './bdt.php'><button class = 'std'>Return to SBA</button></form>
+    <form action = './bd2.php'><button class = 'std'>Return to SBA</button></form>
 
     <form action='bdtdel.php' method='post' class='container'>
         <label>Student Name</label><br>
@@ -44,6 +44,8 @@
                 echo  "<h4 style='color:red; text-align:center'>ALL Records Deleted</h4>";
             }
         }
+
+        mysqli_close($connect);
 
     ?>
 

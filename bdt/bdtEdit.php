@@ -138,58 +138,6 @@
                     echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
                 }
             }
-            // elseif(empty($indTest)&empty($classTest)&!(empty($groupWork)&empty($project)&empty($exams))) {
-            //     $query = "UPDATE
-            //                 bdt
-            //             SET
-            //                 group_work = $groupWork,
-            //                 project = $project,
-            //                 total_60 = $total60,
-            //                 total_50 = $total50,
-            //                 exams = $exams,
-            //                 exams_50 = $exams50,
-            //                 total_100 = $total100
-            //             WHERE
-            //             student_name = '$stdName'";
-
-            //     $result = mysqli_query($connect, $query);
-            //     if($result) {
-            //         echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
-            //     }
-            // }
-            // elseif(empty($indTest)&empty($classTest)&empty($groupWork)&!(empty($project)&empty($exams))) {
-            //     $query = "UPDATE
-            //                 bdt
-            //             SET
-            //                 project = $project,
-            //                 total_60 = $total60,
-            //                 total_50 = $total50,
-            //                 exams = $exams,
-            //                 exams_50 = $exams50,
-            //                 total_100 = $total100
-            //             WHERE
-            //             student_name = '$stdName'";
-
-            //     $result = mysqli_query($connect, $query);
-            //     if($result) {
-            //         echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
-            //     }
-            // }
-            // elseif(empty($indTest)&empty($classTest)&empty($groupWork)&empty($project)&!(empty($exams))) {
-            //     $query = "UPDATE
-            //                 bdt
-            //             SET
-            //                 exams = $exams,
-            //                 exams_50 = $exams50,
-            //                 total_100 = $total100
-            //             WHERE
-            //             student_name = '$stdName'";
-
-            //     $result = mysqli_query($connect, $query);
-            //     if($result) {
-            //         echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
-            //     }
-            // }
         
         }
         mysqli_close($connect);

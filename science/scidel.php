@@ -45,6 +45,8 @@
             }
         }
 
+        mysqli_close($connect);
+
     ?>
 
 </body>

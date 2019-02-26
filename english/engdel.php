@@ -46,6 +46,8 @@
             }
         }
 
+        mysqli_close($connect);
+
     ?>
 
 

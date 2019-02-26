@@ -80,6 +80,8 @@ if(isset($_POST['submit'])) {
         echo "<h4 style='color:green;text-align:center'>$stdName has been Added</h4>";
     }
 }
+
+mysqli_close($connect);
 ?>
     
 </body>

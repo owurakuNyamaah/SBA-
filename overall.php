@@ -12,9 +12,9 @@
     <header class = 'header'>
         <a href = './index.php'>HOME</a>
         <a href = './sba.php'>SBA</a>
-        <a href = './position.php'>POSITIONS</a>
         <a href = './report.php'>REPORTS</a>
     </header>
+
     
     <main>
         <h1>TOTAL SCORES </h1>
