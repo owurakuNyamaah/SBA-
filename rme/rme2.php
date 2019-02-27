@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
     <script src="main.js"></script>
 </head>
+<style>
+    table,th,tr,td{border:2px solid black;border-collapse:collapse;}
+</style>
 <body>
     <header class = 'header'>
         <a href = '../index.php'>HOME</a>
@@ -15,7 +18,6 @@
         <a href = '../report.php'>REPORTS</a>
     </header>
 
-    
     <main>
         <h1>Religious and Moral Education SBA</h1>
         <form action = './rmeStd2.php'><button class = 'std'>ADD student</button></form>

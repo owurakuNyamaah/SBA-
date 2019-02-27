@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
 </head>
+<style>
+    table,th,tr,td{border:2px solid black;border-collapse:collapse;}
+</style>
 <body>
     <header class = 'header'>
-        <a href = './index.php'>HOME</a>
-        <a href = './sba2.php'>SBA</a>
-        <a href = './report.php'>REPORTS</a>
+        <a href = '../index.php'>HOME</a>
+        <a href = '../sba2.php'>SBA</a>
+        <a href = '../report.php'>REPORTS</a>
     </header>
 
     

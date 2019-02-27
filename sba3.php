@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class='container'>
-        <a href = './overall.php' class = 'allpos'>OVERALL POSITIONS</a>
+        <a href = './overall3.php' class = 'allpos'>OVERALL POSITIONS</a>
     </div>
 
     

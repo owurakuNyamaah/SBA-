@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
     <script src="main.js"></script>
 </head>
+<style>
+    table,th,tr,td{border:2px solid black;border-collapse:collapse;}
+</style>
 <body>
     <header class = 'header'>
         <a href = '../index.php'>HOME</a>
@@ -257,14 +260,16 @@
                                     <th>REMARKS</th>
                                 </tr>
                             </table>";
-                        echo "<h1 style='padding:50px'>$search could not be found</h1>";
+                        echo "<h1 style='padding:50px'>No student added</h1>";
                     }
+                        
                 }
 
-                mysqli_close($connect);
+                    
+
+            mysqli_close($connect);
             
             ?>
-
         </div>
     </main>
     

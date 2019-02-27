@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
     <script src="EngStd.php"></script>
 </head>
+<style>
+    table,th,tr,td{border:2px solid black;border-collapse:collapse;}
+    tr th {background:black;color:white;}
+</style>
 <body>
     <header class = 'header'>
         <a href = './index.php'>HOME</a>

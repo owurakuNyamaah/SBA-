@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
     <script src="main.js"></script>
 </head>
+<style>
+    table,th,tr,td{border:2px solid black;border-collapse:collapse;}
+</style>
 <body>
     <header class = 'header'>
         <a href = '../index.php'>HOME</a>
