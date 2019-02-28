@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>JHS1 overall positions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
-    <script src="EngStd.php"></script>
 </head>
 <style>
     table,th,tr,td{border:2px solid black;border-collapse:collapse;}
@@ -81,6 +80,7 @@
                 if(mysqli_num_rows($result) > 0 ) {
                     echo "<table>
                             <tr>
+                                <th>POSITION</th>
                                 <th>NAME</th>
                                 <th>ENGLISH</th>
                                 <th>SCIENCE</th>
@@ -92,10 +92,16 @@
                                 <th>GH</th>
                                 <th>FRENCH</th>
                                 <th>TOTAL</th>
-                                <th>POSITION</th>
                             </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
+                                <td style= 'color:red;text-align:center;'>";
+                                $n = $row['POSITION'];
+                                if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
+                                else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
+                                else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
+                                else {echo $n.'<sup>th</sup>';}
+                        echo    "</td>
                                 <td>$row[STUDENT]</td>
                                 <td>$row[ENGLISH]</td>
                                 <td>$row[SCIENCE]</td>
@@ -107,13 +113,6 @@
                                 <td>$row[GH]</td>
                                 <td>$row[FRENCH]</td>
                                 <td style='color:blue;text-align:center;'>$row[TOTAL]</td>
-                                <td style= 'color:red;text-align:center;'>";
-                                $n = $row['POSITION'];
-                                if($n==1 || ($n%10==1 && $n%100 !=11)){echo $n.'<sup>st</sup>';}
-                                else if($n==2 || ($n%10==2 && $n%100 !=12)) {echo $n.'<sup>nd</sup>';}
-                                else if($n==3 || ($n%10==3 && $n%100 !=13)) {echo $n.'<sup>rd</sup>';}
-                                else {echo $n.'<sup>th</sup>';}
-                        echo    "</td>
                             </tr>";
                     }
                     echo "</table>";

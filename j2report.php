@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Report</title>
+    <title>JHS2 Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
     <style>
@@ -250,11 +250,16 @@
         $qfreP = mysqli_query($connect, $freP);
 
         $sum = "SELECT (eng.total_100+science.total_100+maths.total_100+social.total_100+rme.total_100+bdt.total_100+
-        ict.total_100+gh.total_100+french.total_100) AS total FROM eng INNER JOIN science ON eng.student_name=science.student_name
-        INNER JOIN maths ON maths.student_name=eng.student_name INNER JOIN social ON eng.student_name=social.student_name 
-        INNER JOIN rme ON eng.student_name=rme.student_name INNER JOIN bdt on eng.student_name=bdt.student_name 
-        INNER JOIN ict ON eng.student_name=ict.student_name INNER JOIN gh ON eng.student_name=gh.student_name 
-        INNER JOIN french ON eng.student_name=french.student_name WHERE eng.student_name='$std' ";
+        ict.total_100+gh.total_100+french.total_100) AS total FROM eng 
+        INNER JOIN science ON eng.student_name=science.student_name
+        INNER JOIN maths ON maths.student_name=eng.student_name 
+        INNER JOIN social ON eng.student_name=social.student_name 
+        INNER JOIN rme ON eng.student_name=rme.student_name 
+        INNER JOIN bdt on eng.student_name=bdt.student_name 
+        INNER JOIN ict ON eng.student_name=ict.student_name 
+        INNER JOIN gh ON eng.student_name=gh.student_name 
+        INNER JOIN french ON eng.student_name=french.student_name 
+        WHERE eng.student_name='$std' ";
         $query = mysqli_query($connect, $sum);
 
         $position = "SELECT POSITION FROM (

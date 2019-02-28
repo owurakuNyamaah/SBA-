@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Delete</title>
+    <title>Social Delete</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../student.css" />
 </head>
@@ -21,8 +21,6 @@
     <label>Click on the button below to <b>delete All records</b></label><br>
     <button type='submit' name='alldel' class='alldel'>Delete All</button>
     </form>
-
-
 
     <?php
         $connect = mysqli_connect('localhost','root','','sba');

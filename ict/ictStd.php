@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Student form</title>
+    <title>ICT Student form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../student.css" />
     <script src="main.js"></script>
 </head>
 <body>
     <header>
-        <h2>Student Assesment Details</h2>
+        <h2>Student Assesment Details For ICT</h2>
         <form action = './ict.php'><button class = 'std'>Return to SBA</button></form>
     </header>
 

@@ -8,26 +8,37 @@
     <link rel="stylesheet" type="text/css" media="screen" href="sba.css" />
 </head>
 <style>
-.jhs {
-    margin:100px 200px;
-}
+.jhs {margin:20px 15px;}
 .jhs a{
     background: #59253A;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: xx-large;
-    padding: 50px;
+    font-size: x-large;
+    padding: 20px;
     width: 100%;
     height: 65px;
     display: block;
     text-align:center;
     opacity: 0.85;
-    margin-top:50px;
+    margin-top:20px;
 }
 .jhs a:hover {
     background: #78244C;
     opacity:1;
+}
+
+@media (min-width:45em) {
+    .jhs {
+    margin:100px 200px;
+}
+.jhs a{
+    font-size: xx-large;
+    padding: 50px;
+    margin-top:50px;
+}
+
+
 }
 </style>
 <body>

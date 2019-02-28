@@ -3,25 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>page tittle</title>
+    <title>Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
 </head>
 <style>
-.jhs {
-    margin:100px 200px;
-}
+.jhs {margin:20px 15px;}
 .jhs form{
     background: #59253A;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: xx-large;
-    padding: 50px;
+    font-size: x-large;
+    padding: 20px;
     width: 100%;
     height: 65px;
     display: block;
-    text-align:center;
     opacity: 0.85;
     margin-top:50px;
 }
@@ -30,6 +27,21 @@
 }
 .jhs form button {
     padding:10px;
+}
+
+
+
+@media (min-width:45em) {
+
+.jhs {
+    margin:100px 200px;
+}
+.jhs form{
+    font-size: xx-large;
+    padding: 50px;
+    text-align:center;
+}
+
 }
 
 </style>

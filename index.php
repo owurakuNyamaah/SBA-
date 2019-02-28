@@ -45,8 +45,9 @@
     <main>
         <h3 style='padding-left:15px'>SBA made simple and efficient</h3>
         <p>Student Based Assessment is an integral part of academia because it enables teachers to record and rank the 
-            performance of their students. This web application is designed to assist teachers to record and rank the 
-            terminal positions of their students with ease and efficiently.
+            performance of their students. This web application is designed to assist teachers to record class and exams
+            scores, rank the terminal positions and also automatically create terminal reports of their students with 
+            ease and efficiently.
         </p>
         <div>
             <img src = './images/A.jpg' alt='student pic' class = 'myslides'/>

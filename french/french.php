@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>French SBA</title>
+    <title>JHS1 French SBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
 </head>
@@ -17,7 +17,6 @@
         <a href = '../report.php'>REPORTS</a>
     </header>
 
-    
     <main>
         <h1>French SBA</h1>
         <form action = './freStd.php'><button class = 'std'>ADD student</button></form>
@@ -81,7 +80,13 @@
                         exams,
                         exams_50,
                         total_100,
-                        CASE WHEN total_100 >= 80 THEN 'EXCELLENT' WHEN total_100 >= 70 THEN 'VERY GOOD' WHEN total_100 >= 60 THEN 'GOOD' WHEN total_100 >= 50 THEN 'CREDIT' WHEN total_100 >= 40 THEN 'PASS' ELSE 'FAIL'
+                    CASE 
+                        WHEN total_100 >= 80 THEN 'EXCELLENT' 
+                        WHEN total_100 >= 70 THEN 'VERY GOOD' 
+                        WHEN total_100 >= 60 THEN 'GOOD' 
+                        WHEN total_100 >= 50 THEN 'CREDIT' 
+                        WHEN total_100 >= 40 THEN 'PASS' 
+                        ELSE 'FAIL'
                 END AS remarks,
                 @curRank := IF(
                     @prev = total_100,

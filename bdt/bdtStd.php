@@ -3,29 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Student form</title>
+    <title>BDT Student </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../student.css" />
-    <script>
-        // $('#stdscore').keyup(function() {
-        //     var stdvalue = $(this).val();
-        //     var to50 = stdvalue*0.50;
-        //     $('#to50').val(to50)
-        // })
-        // .keyup();
-        // var stdvalue = $('#stdscore');
-        // var to50 = $('#to50');
-        // insert = function() {
-        //     return to50.val(stdvalue.val() * 0.50);
-        //     }
-        // $('#stdscore').on('keyup',function(){
-        //     $('#to50').val($(this).val()*0.50);
-        // })
-        // $('#exams').on('keyup',function(){
-        //     $('#scalex').val($(this).val()*0.50);
-        // })
-
-    </script>
 </head>
 <body>
     <header>

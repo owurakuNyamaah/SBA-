@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>assesment</title>
+    <title>jhs1 assesment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="sba.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <header class = 'header'>
@@ -29,11 +28,13 @@
     INNER JOIN french ON eng.student_name = french.student_name
     WHERE
         (
-            eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + gh.total_100 + french.total_100
+            eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + 
+            gh.total_100 + french.total_100
         ) =(
         SELECT
             MAX(
-                eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + gh.total_100 + french.total_100
+                eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + 
+                gh.total_100 + french.total_100
             )
         FROM
             eng

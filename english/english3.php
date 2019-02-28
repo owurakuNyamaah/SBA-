@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>English SBA</title>
+    <title>JHS3 English SBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
 </head>
@@ -17,7 +17,6 @@
         <a href = '../report.php'>REPORTS</a>
     </header>
 
-    
     <main>
         <h1>English Language S.B.A</h1>
         <form action = './engStd3.php'><button class = 'std'>ADD student</button></form>
@@ -25,29 +24,28 @@
         <form action='./engdel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
             <span>
-            Number of Students =  <?php
+            <?php
                 $connect = mysqli_connect('localhost','root','','sba3');
-                $sql = "SELECT COUNT(student_name) AS numStds FROM eng";
+                $sql = "SELECT COUNT(student_name) AS numStd FROM eng";
                 $result = mysqli_query($connect, $sql);
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo $row['numStds'];
+                while($row=mysqli_fetch_assoc($result)) {
+                    echo "Nummber of Students = $row[numStd]";
+                }
+           ?> 
+        </span>
+        <span>
+            <?php 
+                $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM eng";
+                $result = mysqli_query($connect, $sql);
+                while($row=mysqli_fetch_assoc($result)) {
+                    echo "Average Score = $row[average]";
                 }
             ?>
-            </span>
-            <span>
-                Average Score = <?php
-                $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM eng";  
-                $result = mysqli_query($connect, $sql);
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo $row['average'];
-                }
-            ?>
-            </span>
-            <span>
-                <form method='post' action='english.php'>
-                    Search Student:
-                    <input type='search' name='stdSearch' required>
-                    <button type ='submit' name='search'>Search</button>
+        </span>
+        <span>
+                <form method = 'post' action = 'maths.php'>
+                    Student Search: <input type = 'search' name='stdSearch' required/>
+                    <button type='submit' name='search'>Search</button>
                 </form>
             </span>
 
