@@ -50,11 +50,11 @@
     <h2 style='text-align:center;'>STUDENT BASED ASSESEMENT</h2>
 
     <div class = 'jhs'>
-        <a href='./sba.php' ><i>Junior High School ONE</i></a>
+        <a href='./sba/jhs1.php' ><i>Junior High School ONE</i></a>
 
-        <a href = './sba2.php'>Junior High School TWO</a>
+        <a href = './sba/jhs2.php'>Junior High School TWO</a>
 
-        <a href = './sba3.php'>Junior High School THREE</a>
+        <a href = './sba/jhs3.php'>Junior High School THREE</a>
     </div>
 </body>
 </html>

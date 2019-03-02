@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>jhs2 assesment</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="sba.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <header class = 'header'>
-        <a href = './index.php'>HOME</a>
-        <a href = './sba2.php'>SBA</a>
-        <a href = './report.php'>REPORTS</a>
-    </header>
-    <main>
-        <?php $connect = mysqli_connect('localhost','root','','sba2'); 
+<?php
         $query ="SELECT
         eng.student_name
     FROM
@@ -327,18 +310,7 @@
         $sql5 = "SELECT student_name FROM french WHERE total_100 = (SELECT MAX(total_100) FROM french)  ";
         $result5 = mysqli_query($connect, $sql5); 
         echo "<li>Best Student is "; while($row=mysqli_fetch_assoc($result5)){echo $row['student_name'];}
-        echo "</li>";
-        ?>
-        </ul>
-        </div>
-        </div>
-    </main>
+        echo "</li>;
+        </ul>"
 
-
-
-    
-
-
-    
-</body>
-</html>
+?>

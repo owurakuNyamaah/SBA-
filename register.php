@@ -9,7 +9,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <?php include('server.php') ?>
+    <?php include('./server/server.php') ?>
 
 
     <form method = 'post' action = 'register.php'>

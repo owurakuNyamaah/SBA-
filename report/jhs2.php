@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JHS3 Report</title>
+    <title>JHS2 Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../subject.css" />
     <style>
         body {color:green;}
         table,th,tr,td{border:2px solid green;border-collapse:collapse;}
@@ -22,7 +22,7 @@
 
     
     <?php 
-    $connect = mysqli_connect('localhost','root','','sba3');
+    $connect = mysqli_connect('localhost','root','','sba2');
     if(isset($_POST['submit'])) {
         $std = $_POST['stdName'];
         $engC = "SELECT total_50 FROM eng WHERE student_name = '$std' ";

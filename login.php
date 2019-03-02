@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
 </head>
 <body>
-    <?php include('server.php') ?>
+    <?php include('./server/server.php') ?>
 
     <form method = 'post' action = 'login.php'>
         <div class = 'container'>

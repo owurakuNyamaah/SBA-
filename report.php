@@ -54,19 +54,19 @@
     <h1 style='text-align:center;'>REPORTS</h1>
 
     <div class = 'jhs'>
-        <form method='post' action='j1report.php'>
+        <form method='post' action='./report/jhs1.php'>
             <label><i>Search JHS 1 Reports</i></label>
             <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
             <button type='submit' name='submit' class= 'report'>F i n d</button>
         </form>
 
-        <form method='post' action='j2report.php'>
+        <form method='post' action='./report/jhs2.php'>
             <label><i>Search JHS 2 Reports</i></label>
             <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
             <button type='submit' name='submit' class= 'report'>F i n d</button>
         </form>
 
-        <form method = 'post' action = 'j3report.php'>
+        <form method = 'post' action = './report/jhs3.php'>
             <label><i>Search JHS 3 Reports</i></label>
             <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
             <button type='submit' name='submit' class= 'report'>F i n d</button>

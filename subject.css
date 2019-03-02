@@ -49,7 +49,7 @@ form, button {
     padding: 3px 0px;
 }
 .count > span {
-    padding: 0px 20px;
+    padding: 0px 5px;
 }
 
 table {
@@ -107,8 +107,11 @@ input[type='text'] {
     .header a {
         padding:5px 10px;
         font-size:140%;
-
     }
+    .count > span {
+        padding: 0px 20px;
+    }
+    
     .report {
         width:10%;
     }
