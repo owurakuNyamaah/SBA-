@@ -24,13 +24,14 @@
         <form action = './mathsEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./mathdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS1  
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba');
                     $sql = "SELECT COUNT(student_name) AS numStd FROM maths";
                     $result = mysqli_query($connect, $sql);
                     while($row=mysqli_fetch_assoc($result)) {
-                        echo "No. of Students = $row[numStd]";
+                        echo "no. of Students = $row[numStd]";
                     }
                ?> 
             </span>

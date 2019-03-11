@@ -9,12 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <header class = 'header'>
-        <a href = '../index.php'>HOME</a>
-        <a href = '../sba/jhs3.php'>SBA</a>
-        <a href = '../report.php'>REPORTS</a>
-    </header>
+
     <main>
+    <h5 style='text-align:center'>JHS 3</h5>
     <?php 
         $connect = mysqli_connect('localhost','root','','sba3'); 
         include('../server/assesment.php');

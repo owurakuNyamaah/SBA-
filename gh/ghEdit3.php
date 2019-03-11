@@ -40,7 +40,7 @@
     <?php 
         $connect = mysqli_connect('localhost','root','','sba3');
 
-        includde('../server/gh/edit.php');
+        include('../server/gh/edit.php');
 
         mysqli_close($connect);
         

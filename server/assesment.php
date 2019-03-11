@@ -8,17 +8,18 @@
     INNER JOIN social ON eng.student_name = social.student_name
     INNER JOIN rme ON eng.student_name = rme.student_name
     INNER JOIN ict ON eng.student_name = ict.student_name
+    INNER JOIN bdt ON eng.student_name = bdt.student_name
     INNER JOIN gh ON eng.student_name = gh.student_name
     INNER JOIN french ON eng.student_name = french.student_name
     WHERE
         (
             eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + 
-            gh.total_100 + french.total_100
+            bdt.total_100 + gh.total_100 + french.total_100
         ) =(
         SELECT
             MAX(
                 eng.total_100 + science.total_100 + maths.total_100 + social.total_100 + rme.total_100 + ict.total_100 + 
-                gh.total_100 + french.total_100
+                bdt.total_100 + gh.total_100 + french.total_100
             )
         FROM
             eng
@@ -27,13 +28,14 @@
         INNER JOIN social ON eng.student_name = social.student_name
         INNER JOIN rme ON eng.student_name = rme.student_name
         INNER JOIN ict ON eng.student_name = ict.student_name
+        INNER JOIN bdt ON eng.student_name = bdt.student_name
         INNER JOIN gh ON eng.student_name = gh.student_name
         INNER JOIN french ON eng.student_name = french.student_name
     )";
         $result = mysqli_query($connect, $query);
-        echo "<h2 style='text-align:center;'>OVERALL BEST STUDENT IS  "; 
+        echo "<h3 style='text-align:center;'>OVERALL BEST STUDENT IS  "; 
         while($row=mysqli_fetch_assoc($result)){echo $row['student_name'];}
-        echo "</h2>"
+        echo "</h3>"
 ?>
 
     <div class='perform'>

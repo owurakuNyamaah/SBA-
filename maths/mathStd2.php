@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,11 +37,12 @@
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
     </form>
 
+
+
 <?php 
 $connect = mysqli_connect('localhost','root','','sba2');
 
 include('../server/maths/std.php');
-
 mysqli_close($connect);
 ?>
     

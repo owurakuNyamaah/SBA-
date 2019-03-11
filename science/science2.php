@@ -24,6 +24,7 @@
         <form action = './sciEdit2.php'><button class = 'edit'>Edit</button></form>
         <form action='./scidel2.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS 2
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba2');

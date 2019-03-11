@@ -9,11 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <header class = 'header'>
-        <a href = '../index.php'>HOME</a>
-        <a href = '../sba/jhs2.php'>SBA</a>
-        <a href = '../report.php'>REPORTS</a>
-    </header>
+    <h5 style='text-align:center'>JHS 2</h5>
+
+
     <main>
         <?php 
         $connect = mysqli_connect('localhost','root','','sba2'); 

@@ -14,7 +14,7 @@
 <body>
     <header class = 'header'>
         <a href = '../index.php'>HOME</a>
-        <a href = '../sba/jh3.php'>SBA</a>
+        <a href = '../sba/jhs3.php'>SBA</a>
         <a href = '../report.php'>REPORTS</a>
     </header>
 
@@ -24,6 +24,7 @@
         <form action = './rmeEdit3.php'><button class = 'edit'>Edit</button></form>
         <form action='./rmedel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS 3
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba3');

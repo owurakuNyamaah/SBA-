@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //Register
-$connect = mysqli_connect('localhost','root','','sba');
+$connect = mysqli_connect('localhost','root','','multilevel');
 $name = $email = $password = $confirmPass = $nameErr = $emailErr = $passError = $pass = $unknown ='';
 if(isset($_POST['register'])) {
     $name = $_POST['user'];
@@ -17,7 +17,7 @@ if(isset($_POST['register'])) {
 
         $_SESSION['username'] = $name;
         $_SESSION['success'] = 'welcome ';
-        header('location: index.php');
+        header('location: indexUser.php');
         
     }
     else{
@@ -34,17 +34,23 @@ if(isset($_POST['signin'])) {
     $result = mysqli_query($connect, $query);
 
     if(mysqli_num_rows($result) == 1) {
-        $_SESSION['username'] = $name;
-        $_SESSION['success'] = 'welcome  ';
-        header('location: index.php');
+        while($row = mysqli_fetch_assoc($result)) {
+            $_SESSION['username'] = $name;
+            $_SESSION['success'] = 'welcome  ';
+            if($row['username']==$name && $row['password']==$pass && $row['type']=='admin'){
+                header('location: index.php');
+            }
+            elseif($row['username']==$name && $row['password']==$pass && $row['type']=='user') {
+                header('location: indexUser.php');
+            }
+
+        }
     }else {
         $unknown = "<span style='color:red;padding-left:30px'>*Invalid username/password</span>";
     }
+
+
 }
-
-
-
-
 
 
 

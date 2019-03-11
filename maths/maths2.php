@@ -24,6 +24,7 @@
         <form action = './mathsEdit2.php'><button class = 'edit'>Edit</button></form>
         <form action='./mathdel2.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS2   
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba2');
@@ -34,7 +35,7 @@
                     }
                ?> 
             </span>
-            <span>
+            <span>          
                 <?php 
                     $sql = "SELECT ROUND(AVG(total_100),3) AS average FROM maths";
                     $result = mysqli_query($connect, $sql);

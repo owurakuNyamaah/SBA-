@@ -61,7 +61,7 @@
                         echo "<table>
                                 <tr>
                                     <th>position</th>
-                                    <th>NAME</th>
+                                    <th>STUDENT NAME</th>
                                     <th>INDIVIDUAL TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
@@ -160,7 +160,7 @@
                     echo "<table>
                             <tr>
                                 <th>position</th>
-                                <th>NAME</th>
+                                <th>STUDENT NAME</th>
                                 <th>INDIVIDUAL TEST(15)</th>
                                 <th>CLASS TEST(15)</th>
                                 <th>GROUP WORK(15)</th>
@@ -211,7 +211,7 @@
                                     <th>REMARKS</th>
                                 </tr>
                             </table>";
-                        echo "<h1 style='padding:50px'>$search could not be found</h1>";
+                        echo "<h1 style='padding:50px'>NO Student added</h1>";
                     }
                 }
 

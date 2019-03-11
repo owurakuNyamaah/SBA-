@@ -13,15 +13,10 @@
     tr th {background:black;color:white;}
 </style>
 <body>
-    <header class = 'header'>
-        <a href = '../index.php'>HOME</a>
-        <a href = '../sba/jhs3.php'>SBA</a>
-        <a href = '../report.php'>REPORTS</a>
-    </header>
 
     
     <main>
-        <h1>TOTAL SCORES </h1>
+        <h1>JHS 3 TOTAL SCORES </h1>
 
         <div style = 'overflow-x:auto'>
             <?php 

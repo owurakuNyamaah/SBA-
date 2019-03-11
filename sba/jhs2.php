@@ -14,7 +14,7 @@
         <a href = '../Jsba.php'>SBA</a>
         <a href = '../report.php'>REPORTS</a>
     </header>
-    <h2 style='text-align:center;'>STUDENT BASED ASSESEMENT FOR JHS 2</h2>
+    <h3 style='text-align:center;'>STUDENT BASED ASSESEMENT FOR JHS 2</h3>
 
     <div class = 'container'>
         <div class = 'row'>

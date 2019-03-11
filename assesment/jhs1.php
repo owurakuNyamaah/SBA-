@@ -8,11 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../sba.css" />
 </head>
 <body>
-    <header class = 'header'>
-        <a href = '../index.php'>HOME</a>
-        <a href = '../sba/jhs1.php'>SBA</a>
-        <a href = '../report.php'>REPORTS</a>
-    </header>
+    <h5 style='text-align:center'>JHS 1</h5>
+
     <main>
         <?php 
         $connect = mysqli_connect('localhost','root','','sba'); 

@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 style='text-align:center'>Delete Student</h1>
-    <form action = './maths.php'><button class = 'std'>Return to SBA</button></form>
+    <form action = './maths2.php'><button class = 'std'>Return to SBA</button></form>
 
     <form action='mathdel2.php' method='post' class='container'>
         <label>Student Name</label><br>

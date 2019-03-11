@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
 </head>
 <style>
-.jhs {margin:20px 15px;}
+.jhs {margin:10px 15px;}
 .jhs form{
     background: #59253A;
     text-decoration: none;
@@ -29,12 +29,10 @@
     padding:10px;
 }
 
-
-
 @media (min-width:45em) {
 
 .jhs {
-    margin:100px 200px;
+    margin:10px 200px;
 }
 .jhs form{
     font-size: xx-large;
@@ -54,8 +52,8 @@
     <h1 style='text-align:center;'>REPORTS</h1>
 
     <div class = 'jhs'>
-        <form method='post' action='./report/jhs1.php'>
-            <label><i>Search JHS 1 Reports</i></label>
+        <form method = 'post' action = './report/jhs3.php'>
+            <label><i>Search JHS 3 Reports</i></label>
             <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
             <button type='submit' name='submit' class= 'report'>F i n d</button>
         </form>
@@ -66,11 +64,48 @@
             <button type='submit' name='submit' class= 'report'>F i n d</button>
         </form>
 
-        <form method = 'post' action = './report/jhs3.php'>
-            <label><i>Search JHS 3 Reports</i></label>
+        <form method='post' action='./report/jhs1.php'>
+            <label><i>Search JHS 1 Reports</i></label>
             <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
             <button type='submit' name='submit' class= 'report'>F i n d</button>
         </form>
+
+        <form method = 'post' action = './report/p6.php'>
+            <label><i>Search  BS 6   Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p5.php'>
+            <label><i>Search BS 5 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p4.php'>
+            <label><i>Search BS 4 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p3.php'>
+            <label><i>Search BS 3 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p2.php'>
+            <label><i>Search BS 2 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p1.php'>
+            <label><i>Search BS 1 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
     </div>
 </body>
 </html>

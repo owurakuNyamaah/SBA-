@@ -13,7 +13,7 @@
 <body>
     <header class = 'header'>
         <a href = '../index.php'>HOME</a>
-        <a href = '../sbajhs2.php'>SBA</a>
+        <a href = '../sba/jhs2.php'>SBA</a>
         <a href = '../report.php'>REPORTS</a>
     </header>
     
@@ -23,6 +23,7 @@
         <form action='./bdtEdit2.php'><button class = 'edit'>Edit</button></form>
         <form action='./bdtdel2.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS 2  
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba2');

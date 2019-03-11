@@ -24,6 +24,7 @@
         <form action = './freEdit3.php'><button class = 'edit'>Edit</button></form>
         <form action='./fredel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = P 3
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba3');

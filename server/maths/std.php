@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['submit'])) {
     $stdName = $_POST['stdName'];
     $indTest = $_POST['indTest'];
@@ -39,4 +40,5 @@ if(isset($_POST['submit'])) {
     }
 
 }
+
 ?>

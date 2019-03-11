@@ -20,9 +20,10 @@
     <main>
         <h1>Integrated Science SBA</h1>
         <form action = './sciStd.php'><button class = 'std'>ADD student</button></form>
-        <form action = './sciEdit'><button class = 'edit'>Edit</button></form>
+        <form action = './sciEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./scidel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
+        Class = JHS 1
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba');

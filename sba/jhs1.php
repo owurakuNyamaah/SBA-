@@ -6,7 +6,6 @@
     <title>JHS1 SBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../sba.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <header class = 'header'>
@@ -14,7 +13,7 @@
         <a href = '../Jsba.php'>SBA</a>
         <a href = '../report.php'>REPORTS</a>
     </header>
-    <h2 style='text-align:center;'>STUDENT BASED ASSESEMENT FOR JHS 1</h2>
+    <h3 style='text-align:center;'>STUDENT BASED ASSESEMENT FOR JHS 1</h3>
 
     <div class = 'container'>
         <div class = 'row'>
