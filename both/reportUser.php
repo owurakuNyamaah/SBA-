@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="subject.css" />
+</head>
+<style>
+.jhs {
+    margin:10px 15px;
+}
+
+.jhs form{
+    background: #59253A;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 20px;
+    width: 100%;
+    height: 65px;
+    display: block;
+    opacity: 0.85;
+    margin:50px 0;
+}
+.jhs form input {
+    padding:15px;
+}
+.jhs form button {
+    padding:10px;
+}
+@media (min-width:48em) {
+    .jhs {
+        margin:10px 200px;
+    }
+    .jhs form{
+        font-size: xx-large;
+        padding: 50px;
+        text-align:center;
+    }
+}
+    
+</style>
+<body>
+    <header class = 'header'>
+        <a href = './indexUser.php'>HOME</a>
+        <a href = './JsbaUser.php'>SBA</a>
+        <a href = './reportUser.php'>REPORTS</a>
+    </header>
+    <h1 style='text-align:center;'>REPORTS</h1>
+
+    <div class = 'jhs'>
+        <form method = 'post' action = './report/jhs3.php'>
+            <label><i>Search JHS 3 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method='post' action='./report/jhs2.php'>
+            <label><i>Search JHS 2 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method='post' action='./report/jhs1.php'>
+            <label><i>Search JHS 1 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p6.php'>
+            <label><i>Search  BS 6   Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p5.php'>
+            <label><i>Search BS 5 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p4.php'>
+            <label><i>Search BS 4 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p3.php'>
+            <label><i>Search BS 3 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p2.php'>
+            <label><i>Search BS 2 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+        <form method = 'post' action = './report/p1.php'>
+            <label><i>Search BS 1 Reports</i></label>
+            <input type='text' name = 'stdName' class='inputR' placeholder='Enter Full Name' required>
+            <button type='submit' name='submit' class= 'report'>F i n d</button>
+        </form>
+
+    </div>
+</body>
+</html>

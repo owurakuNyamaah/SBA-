@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 16px;
+}
+.header {
+    background-color: rgba(0, 81, 255, 0.281);
+    color:white;
+    padding-left: 15px;
+    width:auto;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 120%;
+}
+.header a:hover {
+    background: rgba(0, 0, 0, 0.377);
+    color: white;
+}
+
+.std {
+    background-color: rgba(0, 0, 0, 0.377);
+    color:white;
+    margin-right:80%;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.std:hover {
+    background-color:dodgerblue;
+}
+
+.container {
+    margin: 20px;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    height: 65px;
+    display: block;
+    text-align:center;
+    opacity: 0.85;
+}
+.english {
+    background: #59253A;
+}
+.math {
+    background: #78244C;
+}
+.social {
+    background: #59253A;
+}
+.science {
+    background: #78244C;
+}
+.rme {
+    background: #78244C;
+}
+.ict {
+    background: #59253A;
+}
+.bdt{
+    background: #59253A;
+}
+.french {
+    background: #78244C;
+}
+.gh {
+    background: #59253A;
+}
+.creative {
+    background: #59253A; 
+}
+.citizen {
+    background: #59253A;
+}
+.allpos, .asses {
+    background: #78244C;
+}
+.container a:hover {
+    opacity : 1;
+}
+
+.myslides {
+    display: none;
+    width:100%;
+    height: 300px;
+    padding: 30px
+}
+
+
+.footer {
+    background-color: rgba(0, 38, 255, 0.13);
+    text-align: right;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+.perform {
+    margin: 15px 40px;
+}
+.perform ul {
+    padding: 10px 25px;
+}
+
+
+@media (min-width:48em) {
+    .myslides {
+        height: 590px;
+        padding: 20px 60px;
+    }
+    .row::after {
+        display: table;
+        content:'';
+        clear:both;
+    }
+    [class*='col-'] {
+        float:left;
+    }
+    .col-1, .col-2 {
+        width:50%;
+        padding:0 30px;
+    }
+    
+    .header a {
+        padding:5px 10px;
+        font-size:140%;
+    }
+    .perform {
+        margin: 30px 80px;
+    }
+    .perform ul {
+        padding: 20px 50px;
+    }
+
+}
