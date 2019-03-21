@@ -23,7 +23,7 @@
         <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
         <form action='./bdtdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
-        Class......
+        Class............
             <span>
                <?php 
                     $connect = mysqli_connect('localhost','root','','sba');
@@ -45,8 +45,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'bdt.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name'/>
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload' name = 'reload'>Reset</button>
                 </form>
             </span>
         </div>

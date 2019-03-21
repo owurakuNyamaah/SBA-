@@ -16,7 +16,6 @@
         <div class = 'container'>
             <h1 class = 'header'><b>Register</b><h1>
             <h5>Please fill out the form below to create an account</h5>
-            <hr>
 
             <label><b>Username</b></label><br><?php echo $nameErr ?>
             <input type= 'text' name='user' placeholder='Enter username' value='<?php echo $name;?>' required/><br>

@@ -21,9 +21,6 @@
 
             <button type = 'submit' name = 'signin' class = 'regbutton'>SIGN IN</button>
         </div>
-        <div class = 'container login'>
-                <p>Not yet a member? <a href = './register.php'>Register</a>.</p>
-            </div>
     </form>
 
 

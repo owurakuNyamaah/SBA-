@@ -8,10 +8,12 @@ body {
 }
 .container {
     padding: 16px;
+    background: rgb(211, 211, 211);
 }
 
 .header{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-left: 150px;
 }
 
 hr {
@@ -29,7 +31,7 @@ input[type='text'], input[type='password'] {
 }
 
 input[type='text']:focus, input[type='password']:focus {
-    background: #ddd;
+    background:white;
     outline: none;
 }
 
@@ -59,9 +61,12 @@ a {
 
 @media (min-width: 48em) {
     .container {
-       padding-left: 50px;
+       margin: 30px 34% 0 34%;
     }
     input[type=text],input[type=password], .regbutton, hr {
-        width: 50%;
+        width: 400px;
+    }
+    .login {
+        padding-left: 2px;
     }
 }

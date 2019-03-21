@@ -32,10 +32,11 @@
 
             <button type = 'submit' name = 'register' class = 'regbutton'>SIGN UP</button>
         </div>
-        <div class = 'container login'>
-            <p>Already have an account? <a href = './login.php'>Sign in</a>.</p>
-        </div>
     </form>
+    <div class = 'container login'>
+        <p>Already have an account? <a href = './login.php'>Sign in</a></p>
+    </div>
+
     
 </body>
 </html>

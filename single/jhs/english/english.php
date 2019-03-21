@@ -45,8 +45,9 @@
         </span>
         <span>
                 <form method = 'post' action = 'english.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name'/>
                     <button type='submit' name='search'>Search</button>
+                    <button type ='reload' name = 'reset'>Reset</button>
                 </form>
             </span>
 

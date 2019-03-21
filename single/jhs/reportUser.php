@@ -46,7 +46,7 @@
 <body>
     <header class = 'header'>
         <a href = './indexUser.php'>HOME</a>
-        <a href = './sba/jhs1.php'>SBA</a>
+        <a href = './sba/jhs1User.php'>SBA</a>
         <a href = './reportUser.php'>REPORTS</a>
     </header>
     <h1 style='text-align:center;'>REPORTS</h1>
