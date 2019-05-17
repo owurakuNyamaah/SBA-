@@ -8,41 +8,40 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../student.css" />
 </head>
 <body>
+
+    <?php 
+        $connect = mysqli_connect('localhost','root','','sba');
+        include('../server/french/edit.php');
+            
+    ?>
+
     <header>
-        <h2>Edit Student Details</h2>
+        <h2>Edit French Student Details</h2>
         <form action = './french.php'><button class = 'std'>Return to SBA</button></form>
     </header>
 
     <form method = 'post' action = 'freEdit.php' class = 'container'>
-        <label>Student Name</label><br>
-        <input name='stdName' type= 'text' required placeholder = 'Enter Full Name'/><br>
+    <label>Student Name</label><br>
+        <input name='stdName' type= 'text' value = '<?php echo $std ?>' required/><br>
 
         <label>Individual Test(max 15)</label><br>
-        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any'/><br>
+        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any' value='<?php echo $ind ?>'/><br>
 
         <label>Class Test(max 15)</label><br>
-        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any'/><br>
+        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $class ?>' /><br>
 
         <label>Group Work(max 15)</label><br>
-        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any'/><br>
+        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $group ?>' /><br>
 
         <label>Project(max 15)</label><br>
-        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any'/><br>
+        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $pro ?>' /><br>
 
         <label>Exams Score(100%)</label><br>
-        <input name='exams' type ='number' min = '0' max = '100' step = 'any'/><br>
+        <input name='exams' type ='number' min = '0' max = '100' step = 'any' value='<?php echo $exams ?>' /><br>
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
     </form>
-
-    <?php 
-        $connect = mysqli_connect('localhost','root','','sba');
-
-        include('../server/french/edit.php');
-        mysqli_close($connect);
-            
-    ?>
 
 
 

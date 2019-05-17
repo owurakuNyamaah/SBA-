@@ -1,4 +1,12 @@
 <?php 
+ $std = $_GET['StdName'];
+ $ind = $_GET['indTest'];
+ $class = $_GET['classTest'];
+ $group = $_GET['groupWork'];
+ $pro = $_GET['project'];
+ $exams = $_GET['exams'];
+
+
         if(isset($_POST['submit'])) {  
             $stdName = $_POST['stdName'];
             $query = "SELECT student_name FROM bdt WHERE student_name = '$stdName' ";
@@ -76,7 +84,8 @@
 
                     $result = mysqli_query($connect, $query);
                     if($result) {
-                        echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
+                        // echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
+                        return header('location:./bdt.php');
                     }
                 }
                 else {
@@ -97,12 +106,15 @@
 
                     $result = mysqli_query($connect, $query);
                     if($result) {
-                        echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
+                        // echo "<h4 style='color:green;text-align:center'>$stdName's data has been Updated</h4>";
+                        return header('location:./bdt.php');
                     }
                 }
             }else {
-                echo "<h4 style='color:red;text-align:center'>$stdName does not exist</h4>";
-                echo "<h4 style='color:red;text-align:center'>Add student before you can edit</h4>";
+                // echo "<h4 style='color:red;text-align:center'>$stdName does not exist</h4>";
+                // echo "<h4 style='color:red;text-align:center'>Add student before you can edit</h4>";
+                return header('location:./bdt.php');
+
             }
         
         }

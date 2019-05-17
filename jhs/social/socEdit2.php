@@ -6,44 +6,42 @@
     <title>Social Edit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../student.css" />
+    <script src="main.js"></script>
 </head>
 <body>
+    <?php 
+        $connect = mysqli_connect('localhost','root','','sba2');
+        include('../server/social/edit2.php');
+    ?>
+
     <header>
         <h2>Edit Student Details</h2>
         <form action = './social2.php'><button class = 'std'>Return to SBA</button></form>
     </header>
 
     <form method = 'post' action = 'socEdit2.php' class = 'container'>
-        <label>Student Name</label><br>
-        <input name='stdName' type= 'text' required placeholder = 'Enter Full Name'/><br>
+    <label>Student Name</label><br>
+        <input name='stdName' type= 'text' value = '<?php echo $std ?>' required/><br>
 
         <label>Individual Test(max 15)</label><br>
-        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any' /><br>
+        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any' value='<?php echo $ind ?>'/><br>
 
         <label>Class Test(max 15)</label><br>
-        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any' /><br>
+        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $class ?>' /><br>
 
         <label>Group Work(max 15)</label><br>
-        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any' /><br>
+        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $group ?>' /><br>
 
         <label>Project(max 15)</label><br>
-        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' /><br>
+        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' value='<?php echo $pro ?>' /><br>
 
         <label>Exams Score(100%)</label><br>
-        <input name='exams' type ='number' min = '0' max = '100' step = 'any' /><br>
+        <input name='exams' type ='number' min = '0' max = '100' step = 'any' value='<?php echo $exams ?>' /><br>
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>
     </form>
 
-    <?php 
-        $connect = mysqli_connect('localhost','root','','sba2');
-
-        include('../server/social/edit.php');
-
-        mysqli_close($connect);
-        
-    ?>
 </body>
 </html>
 

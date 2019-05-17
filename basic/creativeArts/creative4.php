@@ -20,7 +20,7 @@
     <main>
         <h1>Creative Arts SBA</h1>
         <form action = './creatStd4.php'><button class = 'std'>ADD student</button></form>
-        <form action='./creatEdit4.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action='./creatEdit4.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./creatdel4.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 4
@@ -45,8 +45,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'creative4.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload>Reset'>Reset</button>
                 </form>
             </span>
         </div>

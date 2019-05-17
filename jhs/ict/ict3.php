@@ -20,7 +20,7 @@
     <main>
         <h1>Information and Communication Technology SBA</h1>
         <form action = './ictStd3.php'><button class = 'std'>ADD student</button></form>
-        <form action = './ictEdit3.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './ictEdit3.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./ictdel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = JHS 3
@@ -45,14 +45,15 @@
             </span>
             <span>
                 <form method = 'post' action = 'ict3.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
         <div style = 'overflow-x:auto'>
             <?php 
-            include('../server/ict/Serv.php');
+            include('../server/ict/Serv3.php');
 
             mysqli_close($connect);
             

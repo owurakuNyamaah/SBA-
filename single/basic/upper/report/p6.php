@@ -14,9 +14,9 @@
 </head>
 <body>
     <header>
-    <h2 style='text-align:center;'>KUNSU R/C JUNIOR HIGH SCHOOL</h2>
+    <!-- <h2 style='text-align:center;'>KUNSU R/C JUNIOR HIGH SCHOOL</h2>
     <h3 style='text-align:center;'>P.O Box 53 Mankranso</h3>
-    <h3 style='text-align:center;'>Motto: Obey And Be Free</h3>
+    <h3 style='text-align:center;'>Motto: Obey And Be Free</h3> -->
     <h2 style='text-align:center;background:green;color:white;width:250px;margin:0 30%;'>TERMINAL REPORT</h2>
     </header>
 

@@ -7,8 +7,8 @@ if(isset($_POST['submit'])) {
         $engR = "SELECT CASE WHEN total_100 >=80 THEN 'EXCELLENT'
                     WHEN total_100 >= 70 THEN 'VERY GOOD' 
                     WHEN total_100 >= 60 THEN 'GOOD'
-                    WHEN total_100 >= 50 THEN 'CREDIT' 
-                    WHEN total_100 >= 40 THEN 'PASS'
+                    WHEN total_100 >= 45 THEN 'CREDIT' 
+                    WHEN total_100 >= 35 THEN 'PASS'
                     ELSE 'FAIL'
                 END AS remarks FROM `eng` WHERE student_name = '$std'";
         $engP = "SELECT
@@ -46,8 +46,8 @@ if(isset($_POST['submit'])) {
         $sciR = "SELECT CASE WHEN total_100 >=80 THEN 'EXCELLENT'
                     WHEN total_100 >= 70 THEN 'VERY GOOD' 
                     WHEN total_100 >= 60 THEN 'GOOD'
-                    WHEN total_100 >= 50 THEN 'CREDIT' 
-                    WHEN total_100 >= 40 THEN 'PASS'
+                    WHEN total_100 >= 45 THEN 'CREDIT' 
+                    WHEN total_100 >= 35 THEN 'PASS'
                     ELSE 'FAIL'
                 END AS remarks FROM `science` WHERE student_name = '$std'";
         $sciP = "SELECT 
@@ -74,8 +74,8 @@ if(isset($_POST['submit'])) {
         $mathsR = "SELECT CASE WHEN total_100 >=80 THEN 'EXCELLENT'
                     WHEN total_100 >= 70 THEN 'VERY GOOD' 
                     WHEN total_100 >= 60 THEN 'GOOD'
-                    WHEN total_100 >= 50 THEN 'CREDIT' 
-                    WHEN total_100 >= 40 THEN 'PASS'
+                    WHEN total_100 >= 45 THEN 'CREDIT' 
+                    WHEN total_100 >= 35 THEN 'PASS'
                     ELSE 'FAIL'
                 END AS remarks FROM `maths` WHERE student_name = '$std'";
         $mathsP = "SELECT student_name, position 
@@ -97,8 +97,8 @@ if(isset($_POST['submit'])) {
         $artsR = "SELECT CASE WHEN total_100 >=80 THEN 'EXCELLENT'
                     WHEN total_100 >= 70 THEN 'VERY GOOD' 
                     WHEN total_100 >= 60 THEN 'GOOD'
-                    WHEN total_100 >= 50 THEN 'CREDIT' 
-                    WHEN total_100 >= 40 THEN 'PASS'
+                    WHEN total_100 >= 45 THEN 'CREDIT' 
+                    WHEN total_100 >= 35 THEN 'PASS'
                     ELSE 'FAIL'
                 END AS remarks FROM `arts` WHERE student_name = '$std'";
         $artsP = "SELECT student_name,position 
@@ -119,8 +119,8 @@ if(isset($_POST['submit'])) {
         $ictR = "SELECT CASE WHEN total_100 >= 80 THEN 'EXCELLENT' 
                             WHEN total_100 >= 70 THEN 'VERY GOOD' 
                             WHEN total_100 >= 60 THEN 'GOOD' 
-                            WHEN total_100 >= 50 THEN 'CREDIT'
-                            WHEN total_100 >= 40 THEN 'PASS' 
+                            WHEN total_100 >= 45 THEN 'CREDIT'
+                            WHEN total_100 >= 35 THEN 'PASS' 
                             ELSE 'FAIL' 
                             END AS remarks FROM ict WHERE student_name = '$std' ";
         $ictP = "SELECT student_name,position 
@@ -142,8 +142,8 @@ if(isset($_POST['submit'])) {
         $citizenR = "SELECT CASE WHEN total_100 >= 80 THEN 'EXCELLENT' 
                             WHEN total_100 >= 70 THEN 'VERY GOOD' 
                             WHEN total_100 >= 60 THEN 'GOOD' 
-                            WHEN total_100 >= 50 THEN 'CREDIT'
-                            WHEN total_100 >= 40 THEN 'PASS' 
+                            WHEN total_100 >= 45 THEN 'CREDIT'
+                            WHEN total_100 >= 35 THEN 'PASS' 
                             ELSE 'FAIL' 
                             END AS remarks FROM citizen WHERE student_name = '$std' ";
         $citizenP = "SELECT student_name,position 
@@ -164,8 +164,8 @@ if(isset($_POST['submit'])) {
         $rmeR = "SELECT CASE WHEN total_100 >= 80 THEN 'EXCELLENT' 
                             WHEN total_100 >= 70 THEN 'VERY GOOD' 
                             WHEN total_100 >= 60 THEN 'GOOD' 
-                            WHEN total_100 >= 50 THEN 'CREDIT'
-                            WHEN total_100 >= 40 THEN 'PASS' 
+                            WHEN total_100 >= 45 THEN 'CREDIT'
+                            WHEN total_100 >= 35 THEN 'PASS' 
                             ELSE 'FAIL' 
                             END AS remarks FROM rme WHERE student_name = '$std' ";
         $rmeP = "SELECT student_name,position
@@ -186,8 +186,8 @@ if(isset($_POST['submit'])) {
         $ghR = "SELECT CASE WHEN total_100 >= 80 THEN 'EXCELLENT' 
                             WHEN total_100 >= 70 THEN 'VERY GOOD' 
                             WHEN total_100 >= 60 THEN 'GOOD' 
-                            WHEN total_100 >= 50 THEN 'CREDIT'
-                            WHEN total_100 >= 40 THEN 'PASS' 
+                            WHEN total_100 >= 45 THEN 'CREDIT'
+                            WHEN total_100 >= 35 THEN 'PASS' 
                             ELSE 'FAIL' 
                             END AS remarks FROM gh WHERE student_name = '$std' ";
         $ghP = "SELECT student_name, position
@@ -209,8 +209,8 @@ if(isset($_POST['submit'])) {
         $freR = "SELECT CASE WHEN total_100 >= 80 THEN 'EXCELLENT' 
                             WHEN total_100 >= 70 THEN 'VERY GOOD' 
                             WHEN total_100 >= 60 THEN 'GOOD' 
-                            WHEN total_100 >= 50 THEN 'CREDIT'
-                            WHEN total_100 >= 40 THEN 'PASS' 
+                            WHEN total_100 >= 45 THEN 'CREDIT'
+                            WHEN total_100 >= 35 THEN 'PASS' 
                             ELSE 'FAIL' 
                             END AS remarks FROM french WHERE student_name = '$std' ";
         $freP = "SELECT student_name, position
@@ -544,8 +544,8 @@ if(isset($_POST['submit'])) {
                     <span>80 and above   =    EXCELLENT</span>
                     <span>70 - 79        =    VERY GOOD</span>
                     <span>60 - 69        =    GOOD</span>
-                    <span>50 - 59        =    CREDIT</span>
-                    <span>40 - 49        =    PASS</span>
+                    <span>45 - 59        =    CREDIT</span>
+                    <span>35 - 44        =    PASS</span>
                     <span>Below 40       =    FAIL</span>
                 </div>";
 

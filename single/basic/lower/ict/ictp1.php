@@ -20,7 +20,7 @@
     <main>
         <h1>Information and Communication Technology SBA</h1>
         <form action = './ictStdp1.php'><button class = 'std'>ADD student</button></form>
-        <form action = './ictEditp1.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './ictEditp1.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./ictdelp1.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class.......
@@ -45,8 +45,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'ictp1.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>

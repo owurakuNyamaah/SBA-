@@ -20,7 +20,7 @@
     <main>
         <h1>Natural Science SBA</h1>
         <form action = './sciStdp1.php'><button class = 'std'>ADD student</button></form>
-        <form action = './sciEditp1.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './sciEditp1.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./scidelp1.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 1
@@ -45,8 +45,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'scip1.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>

@@ -31,8 +31,8 @@
                         WHEN total_100 >= 80 THEN 'EXCELLENT' 
                         WHEN total_100 >= 70 THEN 'VERY GOOD' 
                         WHEN total_100 >= 60 THEN 'GOOD' 
-                        WHEN total_100 >= 50 THEN 'CREDIT' 
-                        WHEN total_100 >= 40 THEN 'PASS' 
+                        WHEN total_100 >= 45 THEN 'CREDIT' 
+                        WHEN total_100 >= 35 THEN 'PASS' 
                         ELSE 'FAIL'
                 END AS remarks,
                 @curRank := IF(

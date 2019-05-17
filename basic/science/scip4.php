@@ -20,7 +20,7 @@
     <main>
         <h1>Integrated Science SBA</h1>
         <form action = './sciStdp4.php'><button class = 'std'>ADD student</button></form>
-        <form action = './sciEditp4.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './sciEditp4.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./scidelp4.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 4
@@ -45,15 +45,16 @@
             </span>
             <span>
                 <form method = 'post' action = 'scip4.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
         <div style = 'overflow-x:auto'>
             <?php 
 
-            include('../server/science/Serv.php');
+            include('../server/science/Serv4.php');
             mysqli_close($connect);
             
             ?>

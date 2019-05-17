@@ -21,7 +21,7 @@
     <main>
         <h1>Ghanaian Language SBA</h1>
         <form action = './ghStd.php'><button class = 'std'>ADD student</button></form>
-        <form action = './ghEdit.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './ghEdit.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./ghdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class =........
@@ -46,8 +46,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'gh.php'>
-                <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                <input type = 'search' name='stdSearch' placeholder='Enter Full Name'/>
                     <button type='submit' name='search'>Search</button>
+                    <button type = 'reload' name='reload'>Reset</button>
                 </form>
             </span>
         </div>

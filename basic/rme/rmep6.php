@@ -21,7 +21,7 @@
     <main>
         <h1>Religious and Moral Education SBA</h1>
         <form action = './rmeStdp6.php'><button class = 'std'>ADD student</button></form>
-        <form action = './rmeEditp6.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './rmeEditp6.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./rmedelp6.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 6
@@ -46,15 +46,16 @@
             </span>
             <span>
                 <form method = 'post' action = 'rmep6.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
         <div style = 'overflow-x:auto'>
             <?php 
 
-            include('../server/rme/Serv.php');
+            include('../server/rme/Serv6.php');
             mysqli_close($connect);
             
             ?>

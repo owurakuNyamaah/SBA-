@@ -20,7 +20,7 @@
     <main>
         <h1>Citizenship Education SBA</h1>
         <form action = './citStd6.php'><button class = 'std'>ADD student</button></form>
-        <form action = './citEdit6.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './citEdit6.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./citdel6.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 6
@@ -45,14 +45,15 @@
             </span>
             <span>
                 <form method = 'post' action = 'citizen6.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
         <div style='overflow-x:auto'>
                 <?php 
-                include('../server/citizenship/Serv.php');
+                include('../server/citizenship/Serv6.php');
                 mysqli_close($connect);
                 ?>
         

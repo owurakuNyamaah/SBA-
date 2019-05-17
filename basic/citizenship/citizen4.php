@@ -20,7 +20,7 @@
     <main>
         <h1>Citizenship Education SBA</h1>
         <form action = './citStd4.php'><button class = 'std'>ADD student</button></form>
-        <form action = './citEdit4.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './citEdit4.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./citdel4.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 4
@@ -45,8 +45,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'citizen4.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>

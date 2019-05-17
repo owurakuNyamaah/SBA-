@@ -16,22 +16,22 @@
 
     <form method = 'post' action = 'citStd6.php' class = 'container'>
         <label>Student Name</label><br>
-        <input name='stdName' type= 'text' placeholder = 'Enter Full Name' required/><br>
+        <input name='stdName' type= 'text' placeholder = 'Enter Full Name' /><br>
 
         <label>Individual Test(max 15)</label><br>
-        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any' required/><br>
+        <input name= 'indTest' type ='number' min = '0' max = '15' step = 'any' /><br>
 
         <label>Class Test(max 15)</label><br>
-        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any' required/><br>
+        <input name= 'classTest' type = 'number' min = '0' max = '15' step = 'any' /><br>
 
         <label>Group Work(max 15)</label><br>
-        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any' required/><br>
+        <input name='groupWork' type = 'number' min = '0' max = '15' step = 'any' /><br>
 
         <label>Project(max 15)</label><br>
-        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' required/><br>
+        <input name= 'project' type = 'number' min = '0' max = '15' step = 'any' /><br>
 
         <label>Exams Score(100%)</label><br>
-        <input name='exams' type ='number' min = '0' max = '100' step = 'any' required/><br>
+        <input name='exams' type ='number' min = '0' max = '100' step = 'any' /><br>
 
         <button class ='save' type = 'submit' name = 'submit'><b>SAVE</b></button>
         <button class = 'reset' type = 'reset'><b>Reset</b></button>

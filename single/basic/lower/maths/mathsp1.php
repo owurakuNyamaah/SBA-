@@ -21,7 +21,7 @@
     <main>
         <h1>Mathematics SBA</h1>
         <form action = './mathStdp1.php'><button class = 'std'>ADD student</button></form>
-        <form action = './mathsEditp1.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './mathsEditp1.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./mathdelp1.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class......  
@@ -46,8 +46,9 @@
             </span>
             <span>
                 <form method = 'post' action = 'mathsp1.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>

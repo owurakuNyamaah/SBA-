@@ -20,7 +20,7 @@
     <main>
         <h1>English Language S.B.A</h1>
         <form action = './engStd.php'><button class = 'std'>ADD student</button></form>
-        <form action='engEdit.php'><button class= 'edit'>Edit</button></form>
+        <!-- <form action='engEdit.php'><button class= 'edit'>Edit</button></form> -->
         <form action='./engdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class=......

@@ -20,7 +20,7 @@
     <main>
         <h1>Basic Design And Technology SBA</h1>
         <form action = './bdtStd.php'><button class = 'std'>ADD student</button></form>
-        <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action='./bdtEdit.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./bdtdel.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class............

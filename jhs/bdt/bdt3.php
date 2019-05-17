@@ -21,7 +21,7 @@
     <main>
         <h1>Basic Design And Technology SBA</h1>
         <form action = './bdtStd3.php'><button class = 'std'>ADD student</button></form>
-        <form action='./bdtEdit3.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action='./bdtEdit3.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./bdtdel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class=JHS 3  
@@ -46,15 +46,16 @@
             </span>
             <span>
                 <form method = 'post' action = 'bdt3.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
 
         <div style = 'overflow-x:auto'>
             <?php 
-            include('../server/bdt/Serv.php');
+            include('../server/bdt/Serv3.php');
 
             mysqli_close($connect);
             

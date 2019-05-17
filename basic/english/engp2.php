@@ -20,7 +20,7 @@
     <main>
         <h1>English Language S.B.A</h1>
         <form action = './engStdp2.php'><button class = 'std'>ADD student</button></form>
-        <form action='engEditp2.php'><button class= 'edit'>Edit</button></form>
+        <!-- <form action='engEditp2.php'><button class= 'edit'>Edit</button></form> -->
         <form action='./engdelp2.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = P 2
@@ -45,8 +45,9 @@
         </span>
         <span>
                 <form method = 'post' action = 'engp2.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                <input type = 'search' name='stdSearch' placeholder='Enter Full Name'/>
                     <button type='submit' name='search'>Search</button>
+                    <button type='submit' >Reset</button>
                 </form>
             </span>
 
@@ -54,7 +55,7 @@
 
         <div style = 'overflow-x:auto'>
             <?php 
-                include('../server/english/Serv.php');
+                include('../server/english/Serv2.php');
         ?>
         </div>
     </main>

@@ -21,7 +21,7 @@
     <main>
         <h1>Integrated Science SBA</h1>
         <form action = './sciStd3.php'><button class = 'std'>ADD student</button></form>
-        <form action = './sciEdit3.php'><button class = 'edit'>Edit</button></form>
+        <!-- <form action = './sciEdit3.php'><button class = 'edit'>Edit</button></form> -->
         <form action='./scidel3.php'><button class = 'del'>Delete</button></form>
         <div class = 'count'>
         Class = JHS 3
@@ -46,14 +46,15 @@
             </span>
             <span>
                 <form method = 'post' action = 'science3.php'>
-                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' required/>
+                    <input type = 'search' name='stdSearch' placeholder='Enter Full Name' />
                     <button type='submit' name='search'>Search</button>
+                    <button type='reload'>Reset</button>
                 </form>
             </span>
         </div>
         <div style = 'overflow-x:auto'>
             <?php 
-            include('../server/science/Serv.php');
+            include('../server/science/Serv3.php');
             mysqli_close($connect);
             
             ?>

@@ -27,7 +27,7 @@
                         exams,
                         exams_50,
                         total_100,
-                        CASE WHEN total_100 >= 80 THEN 'EXCELLENT' WHEN total_100 >= 70 THEN 'VERY GOOD' WHEN total_100 >= 60 THEN 'GOOD' WHEN total_100 >= 50 THEN 'CREDIT' WHEN total_100 >= 40 THEN 'PASS' ELSE 'FAIL'
+                        CASE WHEN total_100 >= 80 THEN 'EXCELLENT' WHEN total_100 >= 70 THEN 'VERY GOOD' WHEN total_100 >= 60 THEN 'GOOD' WHEN total_100 >= 45 THEN 'CREDIT' WHEN total_100 >= 35 THEN 'PASS' ELSE 'FAIL'
                 END AS remarks,
                 @curRank := IF(
                     @prev = total_100,
@@ -55,8 +55,8 @@
                         echo "<table>
                                 <tr>
                                     <th>position</th>
-                                    <th>NAME</th>
-                                    <th>INDIVIDUAL TEST(15)</th>
+                                    <th>STUDENT NAME</th>
+                                    <th>IND.TEST(15)</th>
                                     <th>CLASS TEST(15)</th>
                                     <th>GROUP WORK(15)</th>
                                     <th>PROJECT WORK(15)</th>
@@ -66,6 +66,7 @@
                                     <th>EXAMS 50%</th>
                                     <th>TOTAL 100%</th>
                                     <th>REMARKS</th>
+                                    <th> </th>
                                 </tr>";
                         while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
@@ -87,6 +88,11 @@
                                     <td style='color:blue;'>$row[exams_50]</td>
                                     <td style='color:red;'>$row[total_100]</td>
                                     <td>$row[remarks]</td>
+                                    <td>
+                                    <button class='edit'>
+                                    <a href = './engEditp1.php?StdName=$row[student_name]&indTest=$row[individual_test]&classTest=$row[class_test]&groupWork=$row[group_work]&project=$row[project]&exams=$row[exams]' style='text-decoration:none;color:white'>Edit</a>
+                                    </button>
+                                </td>        
                                 </tr>";
                         }
                         echo "</table>";
@@ -153,19 +159,20 @@
                 if(mysqli_num_rows($result) > 0 ) {
                     echo "<table>
                             <tr>
-                                <th>position</th>
-                                <th>NAME</th>
-                                <th>INDIVIDUAL TEST(15)</th>
-                                <th>CLASS TEST(15)</th>
-                                <th>GROUP WORK(15)</th>
-                                <th>PROJECT WORK(15)</th>
-                                <th>TOTAL(60)</th>
-                                <th>TOTAL 50%</th>
-                                <th>EXAMS</th>
-                                <th>EXAMS 50%</th>
-                                <th>TOTAL 100%</th>
-                                <th>REMARKS</th>
-                            </tr>";
+                            <th>position</th>
+                            <th>STUDENT NAME</th>
+                            <th>IND.TEST(15)</th>
+                            <th>CLASS TEST(15)</th>
+                            <th>GROUP WORK(15)</th>
+                            <th>PROJECT WORK(15)</th>
+                            <th>TOTAL(60)</th>
+                            <th>TOTAL 50%</th>
+                            <th>EXAMS</th>
+                            <th>EXAMS 50%</th>
+                            <th>TOTAL 100%</th>
+                            <th>REMARKS</th>
+                            <th> </th>
+                        </tr>";
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
                                 <td style= 'color:red;text-align:center;'>";
@@ -186,6 +193,11 @@
                                 <td style='color:blue;'>$row[exams_50]</td>
                                 <td style='color:red;'>$row[total_100]</td>
                                 <td>$row[remarks]</td>
+                                <td>
+                                <button class='edit'>
+                                <a href = './engEditp1.php?StdName=$row[student_name]&indTest=$row[individual_test]&classTest=$row[class_test]&groupWork=$row[group_work]&project=$row[project]&exams=$row[exams]' style='text-decoration:none;color:white'>Edit</a>
+                                </button>
+                            </td>    
                             </tr>";
                     }
                     echo "</table>";

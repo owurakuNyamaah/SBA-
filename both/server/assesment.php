@@ -54,12 +54,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM eng WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM eng WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM eng WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM eng WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -86,12 +86,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM maths WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM maths WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM maths WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM maths WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -116,12 +116,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM science WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM science WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM science WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM science WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -146,12 +146,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM social WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM social WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM social WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM social WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -176,12 +176,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM gh WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM gh WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM gh WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM gh WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -209,12 +209,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM ict WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM ict WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM ict WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM ict WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -239,12 +239,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM rme WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM rme WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM rme WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM rme WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -269,12 +269,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM bdt WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM bdt WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM bdt WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM bdt WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
@@ -299,12 +299,12 @@
         echo "<li>Exams Lowest score = "; while($row=mysqli_fetch_assoc($result2)){echo $row['exams'];}
         echo "</li>";
 
-        $sql3 = "SELECT COUNT(total_100) AS pass FROM french WHERE total_100 >= 40 ";
+        $sql3 = "SELECT COUNT(total_100) AS pass FROM french WHERE total_100 >= 35 ";
         $result3 = mysqli_query($connect, $sql3); 
         echo "<li>Number of students who passed = "; while($row=mysqli_fetch_assoc($result3)){echo $row['pass'];}
         echo "</li>";
 
-        $sql4 = "SELECT COUNT(total_100) AS failed FROM french WHERE total_100 <= 40 ";
+        $sql4 = "SELECT COUNT(total_100) AS failed FROM french WHERE total_100 < 35 ";
         $result4 = mysqli_query($connect, $sql4); 
         echo "<li>Number of students who failed = "; while($row=mysqli_fetch_assoc($result4)){echo $row['failed'];}
         echo "</li>";
